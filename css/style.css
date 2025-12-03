@@ -8,6 +8,10 @@ header, .section-height{
     padding-block: 40px;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 :root{
 /* ============================== COLORS ============================== */
     /* Primary */
@@ -264,7 +268,8 @@ nav .logo-sida {
     padding: 10px;
     display: grid;
     place-items: center;
-    background: var(--white);
+    background: var(--secondary-500);
+    color: var(--white);
     text-align: center;
     line-height: 50px;
     border-radius: 50%;
@@ -447,6 +452,13 @@ nav .logo-sida {
 }
 
 @media screen and (max-width: 768px) {
+    .portfolio-wrapper i:first-child{
+    left: 0;
+}
+
+.portfolio-wrapper i:last-child{
+    right: 0;
+}
 }
     
 @media screen and (max-width: px) {

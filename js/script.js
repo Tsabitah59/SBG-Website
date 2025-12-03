@@ -16,65 +16,65 @@ console.log(logo.src);
 })
 
 // ============================== Grup Bisnis ==============================
-// Mendapatkan elemen
-const grupBisnisTitle = document.getElementById('grup-bisnis-title');
-const grupBisnisDeskripsi = document.getElementById('grup-bisnis-deskripsi');
-const grupBisnisLink = document.getElementById('grup-bisnis-link');
+// // Mendapatkan elemen
+// const grupBisnisTitle = document.getElementById('grup-bisnis-title');
+// const grupBisnisDeskripsi = document.getElementById('grup-bisnis-deskripsi');
+// const grupBisnisLink = document.getElementById('grup-bisnis-link');
 
-// MODIFIKASI: Gunakan cubic-bezier untuk easing custom yang lebih smooth
-grupBisnisTitle.style.transition = "500ms ease";
-grupBisnisDeskripsi.style.transition = "500ms ease";
+// // MODIFIKASI: Gunakan cubic-bezier untuk easing custom yang lebih smooth
+// grupBisnisTitle.style.transition = "500ms ease";
+// grupBisnisDeskripsi.style.transition = "500ms ease";
 
-// Mengganti Judul
-let sbkTitle = "SIDA BERJAYA KONSULTAN";
-let sbeTitle = "SIDA BERJAYA ENERGI";
-let sjkTitle = "SIDA JAYA KONSTRUKSI";
+// // Mengganti Judul
+// let sbkTitle = "SIDA BERJAYA KONSULTAN";
+// let sbeTitle = "SIDA BERJAYA ENERGI";
+// let sjkTitle = "SIDA JAYA KONSTRUKSI";
 
-// Mengganti Deskirpsi
-let sbkDeskripsi = "Menyediakan layanan konsultasi ahli dalam fasilitasi impor dan kepabeanan, membantu klien memperlancar operasional, memastikan kepatuhan, serta meminimalkan resiko bisnis.";
-let sbeDeskripsi = "Mendorong transisi menuju energi berkelanjutan melalui solusi energi terbarukan, infrastruktur pengisian kendaraan listrik, serta SIDAsafe, layanan transportasi online dengan kendaraan listrik khusus perempuan.";
-let sjkDeskripsi = "Menyediakan solusi konstruksi menyeluruh , mulai dari pengembangan lahan, layanan desain & bangun, hingga pengembangan SIDA Tower sebagai ikon gedung perkantoran dan bisnis masa depan.";
+// // Mengganti Deskirpsi
+// let sbkDeskripsi = "Menyediakan layanan konsultasi ahli dalam fasilitasi impor dan kepabeanan, membantu klien memperlancar operasional, memastikan kepatuhan, serta meminimalkan resiko bisnis.";
+// let sbeDeskripsi = "Mendorong transisi menuju energi berkelanjutan melalui solusi energi terbarukan, infrastruktur pengisian kendaraan listrik, serta SIDAsafe, layanan transportasi online dengan kendaraan listrik khusus perempuan.";
+// let sjkDeskripsi = "Menyediakan solusi konstruksi menyeluruh , mulai dari pengembangan lahan, layanan desain & bangun, hingga pengembangan SIDA Tower sebagai ikon gedung perkantoran dan bisnis masa depan.";
 
-// Mengganti Link
-// let sbkLink = "google.com"
+// // Mengganti Link
+// // let sbkLink = "google.com"
 
-function sbkChange() {
-    grupBisnisTitle.style.opacity = 0;
-    grupBisnisDeskripsi.style.opacity = 0;
+// function sbkChange() {
+//     grupBisnisTitle.style.opacity = 0;
+//     grupBisnisDeskripsi.style.opacity = 0;
 
-    setTimeout(() => {
-        grupBisnisTitle.innerHTML = sbkTitle;
-        grupBisnisDeskripsi.innerHTML = sbkDeskripsi;
+//     setTimeout(() => {
+//         grupBisnisTitle.innerHTML = sbkTitle;
+//         grupBisnisDeskripsi.innerHTML = sbkDeskripsi;
     
-        grupBisnisTitle.style.opacity = 1;
-        grupBisnisDeskripsi.style.opacity = 1;
-    }, 500);
-}
+//         grupBisnisTitle.style.opacity = 1;
+//         grupBisnisDeskripsi.style.opacity = 1;
+//     }, 500);
+// }
 
-function sbeChange() {
-    grupBisnisTitle.style.opacity = 0;
-    grupBisnisDeskripsi.style.opacity = 0;
+// function sbeChange() {
+//     grupBisnisTitle.style.opacity = 0;
+//     grupBisnisDeskripsi.style.opacity = 0;
 
-    setTimeout(() => {
-        grupBisnisTitle.innerHTML = sbeTitle;
-        grupBisnisDeskripsi.innerHTML = sbeDeskripsi;
+//     setTimeout(() => {
+//         grupBisnisTitle.innerHTML = sbeTitle;
+//         grupBisnisDeskripsi.innerHTML = sbeDeskripsi;
     
-        grupBisnisTitle.style.opacity = 1;
-        grupBisnisDeskripsi.style.opacity = 1;
-    }, 500);
-}
+//         grupBisnisTitle.style.opacity = 1;
+//         grupBisnisDeskripsi.style.opacity = 1;
+//     }, 500);
+// }
 
-function sjkChange() {
-    grupBisnisTitle.style.opacity = 0;
-    grupBisnisDeskripsi.style.opacity = 0;
-    setTimeout(() => {
-        grupBisnisTitle.innerHTML = sjkTitle;
-        grupBisnisDeskripsi.innerHTML = sjkDeskripsi;
+// function sjkChange() {
+//     grupBisnisTitle.style.opacity = 0;
+//     grupBisnisDeskripsi.style.opacity = 0;
+//     setTimeout(() => {
+//         grupBisnisTitle.innerHTML = sjkTitle;
+//         grupBisnisDeskripsi.innerHTML = sjkDeskripsi;
 
-        grupBisnisTitle.style.opacity = 1;
-        grupBisnisDeskripsi.style.opacity = 1;
-    }, 500);
-}
+//         grupBisnisTitle.style.opacity = 1;
+//         grupBisnisDeskripsi.style.opacity = 1;
+//     }, 500);
+// }
 
 // ============================== Portfolio Carousel ==============================
 const portfolioWrapper = document.querySelector(".portfolio-wrapper");
