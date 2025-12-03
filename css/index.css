@@ -1,0 +1,195 @@
+/* ============================== HERO ============================== */
+.hero {
+    background: url(../assets/image/bg-hero-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 110dvh;
+    width: 100%;
+    box-shadow: 0 -86px 24.4px -60px var(--white) inset;
+}
+
+/* ============================== ABOUT ============================== */
+.about .card-layout {
+    overflow: visible;
+    background: var(--thin-white);
+}
+
+.about .visi-misi-button {
+    position: relative;
+}
+
+.about .visi-misi-button img {
+    width: 30px;
+}
+
+.about .visi-misi-button:hover .tooltip {
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.about .visi-misi-button .tooltip {
+    position: absolute;
+    bottom: 100%;
+
+    opacity: 0;
+    transform: translateY(10px);  /* SATU-SATUNYA transform */
+    transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+
+    background-color: var(--primary-700);
+    color: var(--white);
+    border-radius: var(--default-border-radius);
+    text-align: justify;
+
+    width: 212%;
+    padding: 12px;
+}
+
+.visi-misi-group .col-6:first-child .visi-misi-button .tooltip {
+    left: 0;
+}
+
+.visi-misi-group .col-6:last-child .visi-misi-button .tooltip {
+    right: 0;
+}
+
+.about .about-bg-img {
+    background: #000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    width: 20%;
+    height: 70dvh;
+}
+
+.about .about-bg-img:first-child {
+    left: 0;
+    border-radius: 0 var(--big-border-radius) var(--big-border-radius) 0;
+}
+.about .about-bg-img:last-child {
+    right: 0;
+    border-radius: var(--big-border-radius) 0 0 var(--big-border-radius);
+}
+
+/* ============================== MOTTO ============================== */
+.motto {
+    background: var(--primary-700);
+    height: 60dvh !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.motto .blurry-circle {
+    top: -17px;
+    left: -360px;
+}
+
+.motto .dots-bg {
+    top: -50;
+    right: -18;
+    z-index: -1;
+
+}
+
+/* ============================== GRUP BISNIS ============================== */
+.grup-bisnis .grup-bisnis-penjelasan-bg {
+    height: 100dvh;
+    background: #000;
+    border-radius: 20px;
+    display: grid;
+    place-items: end;
+}
+
+.grup-bisnis .grup-bisnis-penjelasan-card{
+    background: var(--thin-white);
+    background-blend-mode: overlay;
+}
+
+.card-kelompok-grup-bisnis {
+    width: 100%;
+    display: block;
+}
+
+/* ============================== KEUNGGULAN ============================== */
+.keunggulan{
+    height: 80dvh;
+}
+
+/* ============================== RUNNING TEXT ============================== */
+.running-text {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.running-text::-webkit-scrollbar {
+    display: none;
+}
+
+.running-text h3 {
+    animation-name: move;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ============================== FAQ ============================== */
+.faq .accordian-button {
+    color: var(--text-color);
+    padding: 0 !important;
+}
+
+
+.faq .cta-faq .isi-cta-faq {
+    background: var(--primary-50);
+    padding: 16px;
+    border-radius: var(--default-border-radius);
+}
+
+/* ============================== RESPONSIVE ======================================================================================================================== */
+
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 991.5px) {
+    .about .about-bg-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    /* ============================== SLIDER ============================== */
+    .portfolio-wrapper .portfolio-carousel{
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+ 
+@media screen and (max-width: 600px) {
+    
+    /* ============================== SLIDER ============================== */
+    .portfolio-wrapper .portfolio-carousel{
+        grid-auto-columns: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+}
+    
+@media screen and (max-width: px) {
+}
+ 
