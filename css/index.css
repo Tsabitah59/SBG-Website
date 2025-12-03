@@ -169,6 +169,10 @@
     .about .about-bg-img {
         display: none;
     }
+
+    .faq .cta-faq {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -177,6 +181,10 @@
     .portfolio-wrapper .portfolio-carousel{
         grid-auto-columns: calc((100% / 2) - 9px);
     }
+}
+
+@media screen and (max-width: 768px) {
+    
 }
  
 @media screen and (max-width: 600px) {
@@ -187,9 +195,15 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-}
-    
-@media screen and (max-width: px) {
+@media screen and (max-width: 576px) {
+    /* ============================== ABOUT ============================== */
+    .about .heading-2, .about .body-p {
+        text-align: left !important;
+    }
+
+    .about span.text-color-secondary  {
+        display: block;
+        text-align: left !important;
+    }
 }
  

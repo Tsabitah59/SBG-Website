@@ -230,13 +230,11 @@ nav .logo-sida {
     height: 0%;
     z-index: -1;
     transition: all var(--default-duration);
-
-    
 }
 
 .button-primary-medium:hover {
     color: var(--text-color);
-    scale: 1.08;
+    scale: 1.02;
     transform: translateY(-3px);
     box-shadow: var(--active-shadow);
 }
@@ -373,6 +371,7 @@ nav .logo-sida {
 .footer .sosmed-group {
     list-style: none;
     padding: 0;
+    width: 100%;
 }
 
 .footer .sosmed-icon {
@@ -399,6 +398,28 @@ nav .logo-sida {
 
 }
 
+.footer .contact-group .contact-list {
+    gap: 3px;
+    list-style: none;
+    display: flex;
+    align-items: start;
+}
+
+.footer .contact-group .contact-list i {
+    font-size: 16px;
+    margin-right: 4px;
+    color: var(--white);
+}
+
+.footer .contact-group .contact-list span {
+    font-size: 14px;
+}
+
+.footer .blurry-circle {
+    top: 100px;
+    right: -100px;
+}
+ 
 /* ============================== RESPONSIVE ======================================================================================================================== */
 @media screen and (max-width: 1024px) {
     body {
