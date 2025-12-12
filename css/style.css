@@ -153,6 +153,17 @@ nav .logo-sida {
     box-shadow: var(--box-shadow);
 }
 
+.navbar-toggler{
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+    color: transparent !important;
+}
+
+.navbar-toggler-icon {
+    background-image: none !important;
+}
+
 .nav-link.body-p::after {
     content: "";
     display: block;
@@ -254,6 +265,9 @@ nav .logo-sida {
     overflow: hidden;
     padding: 16px;
     gap: 16px;
+    background: var(--thin-white);
+    background-blend-mode: overlay;
+    backdrop-filter: blur(8.25px);
 }
 
 /* ============================== SLIDER ============================== */

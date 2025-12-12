@@ -18,17 +18,20 @@
 </head>
 <body>
     <!-- ============================== NAVBAR ============================== -->
-    <nav class="navbar navbar-expand-lg bg-transparent navbar-dark position-fixed w-100">
+    <nav class="navbar bg-transparent navbar-dark navbar-expand-lg fixed-top">
         <div class="container-md">
-            <!-- Logo -->
             <a class="navbar-brand" href="#">
                 <img id="logo-sida" class="logo-sida" src="assets/logo/logo-white.svg" alt="SIDA Berjaya Group">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <i class="fi fi-rr-menu-burger navbar-toggler-icon"></i>
             </button>
-            <div class="collapse navbar-collapse flex-grow-1" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <div class="offcanvas offcanvas-start w-auto" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body align-items-center">
+                <ul class="navbar-nav mx-auto my-auto mb-2 mb-lg-0 justify-content-end flex-lg-grow-0 flex-grow-1 pe-3">
                     <li class="nav-item">
                         <a class="nav-link body-p" href="#header">Beranda</a>
                     </li>
@@ -46,6 +49,7 @@
                     </li>
                 </ul>
                 <button class="button-primary-medium">Hubungi Kami</button>
+            </div>
             </div>
         </div>
     </nav>
@@ -159,56 +163,58 @@
     </section> -->
 
     <!-- ============================== KEUNGGULAN ============================== -->
-    <section id="keunggulan" class="keunggulan d-flex align-items-center">
+    <section id="keunggulan" class="keunggulan section-height d-flex align-items-center">
         <div class="container-md">
-            <div class="row row-cols-3">
-                <div class="col my-auto">
+            <div class="keunggulan-big-group row row-cols-lg-3 row-cols-sm-2 row-cols-1 align-items-stretch" id="keunggulan-wrapper">
+                <div class="col my-auto text-sm-start text-center">
                     <span class="body-p text-color-secondary">KEUNGGULAN</span>
                     <h2 class="heading-2">keunggulan<span class="text-span"><br>Terpadu</span> kami</h2>
                 </div>
-                <div class="col p-2">
-                    <div class="card-layout d-flex flex-column">
-                        <div class="d-flex align-items-center gap-3">
-                            <span class="primary-tag">1</span>
-                            <h6 class="heading-6 m-0">Keahlian Terintegrasi</h6>
+                <div class="keunggulan-card-group" id="keunggulan-card-group-to-hide">
+                    <div class="col p-2">
+                        <div class="card-layout d-flex flex-column h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="primary-tag">1</span>
+                                <h6 class="heading-6 m-0">Keahlian Terintegrasi</h6>
+                            </div>
+                            <p class="body-p text-color-secondary">Tiga pilar bisnis yang kuat bekerja secara sinergis untuk menghadirkan solusi menyeluruh dari awal hingga akhir.</p>
                         </div>
-                        <p class="body-p text-color-secondary">Tiga pilar bisnis yang kuat bekerja secara sinergis untuk menghadirkan solusi menyeluruh dari awal hingga akhir.</p>
                     </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card-layout d-flex flex-column">
-                        <div class="d-flex align-items-center gap-3">
-                            <span class="primary-tag">2</span>
-                            <h6 class="heading-6 m-0">Inovatif & Berkelanjutan </h6>
+                    <div class="col p-2">
+                        <div class="card-layout d-flex flex-column h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="primary-tag">2</span>
+                                <h6 class="heading-6 m-0">Inovatif & Berkelanjutan </h6>
+                            </div>
+                            <p class="body-p text-color-secondary">Berfokus pada energi terbarukan, transportasi ramah lingkungan, dan infrastruktur modern untuk dampak jangka panjang.</p>
                         </div>
-                        <p class="body-p text-color-secondary">Berfokus pada energi terbarukan, transportasi ramah lingkungan, dan infrastruktur modern untuk dampak jangka panjang.</p>
                     </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card-layout d-flex flex-column">
-                        <div class="d-flex align-items-center gap-3">
-                            <span class="primary-tag">3</span>
-                            <h6 class="heading-6 m-0">Mitra Terpercaya</h6>
+                    <div class="col p-2">
+                        <div class="card-layout d-flex flex-column h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="primary-tag">3</span>
+                                <h6 class="heading-6 m-0">Mitra Terpercaya</h6>
+                            </div>
+                            <p class="body-p text-color-secondary">Terbukti andal alam mendampingi klien melalui proses komplek, mulai dari impor dan kepatuhan hingga konstruksi dan solusi energi.</p>
                         </div>
-                        <p class="body-p text-color-secondary">Terbukti andal alam mendampingi klien melalui proses komplek, mulai dari impor dan kepatuhan hingga konstruksi dan solusi energi.</p>
                     </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card-layout d-flex flex-column">
-                        <div class="d-flex align-items-center gap-3">
-                            <span class="primary-tag">4</span>
-                            <h6 class="heading-6 m-0">Bertanggung Jawab Sosial</h6>
+                    <div class="col p-2">
+                        <div class="card-layout d-flex flex-column h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="primary-tag">4</span>
+                                <h6 class="heading-6 m-0">Bertanggung Jawab Sosial</h6>
+                            </div>
+                            <p class="body-p text-color-secondary">Berkomitmen pada keselamatan, pemberdayaan, dan inklusivitas melalui inisiatif seperti SIDAsafe, layanan transportasi listrik khusus perempuan.</p>
                         </div>
-                        <p class="body-p text-color-secondary">Berkomitmen pada keselamatan, pemberdayaan, dan inklusivitas melalui inisiatif seperti SIDAsafe, layanan transportasi listrik khusus perempuan.</p>
                     </div>
-                </div>
-                <div class="col p-2">
-                    <div class="card-layout d-flex flex-column">
-                        <div class="d-flex align-items-center gap-3">
-                            <span class="primary-tag">5</span>
-                            <h6 class="heading-6 m-0">Berorientasi Masa Depan</h6>
+                    <div class="col p-2">
+                        <div class="card-layout d-flex flex-column h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="primary-tag">5</span>
+                                <h6 class="heading-6 m-0">Berorientasi Masa Depan</h6>
+                            </div>
+                            <p class="body-p text-color-secondary">Berdedikasi membangun solusi yang menciptiakan dampak positif bagi bisnis, komunitas, dan lingkungan di Indonesia.</p>
                         </div>
-                        <p class="body-p text-color-secondary">Berdedikasi membangun solusi yang menciptiakan dampak positif bagi bisnis, komunitas, dan lingkungan di Indonesia.</p>
                     </div>
                 </div>
             </div>
@@ -227,13 +233,13 @@
         <div class="container-md">
             <!-- Judul -->
             <div class="row align-items-center justify-content-between">
-                <div class="col-sm-8 col-12">
+                <div class="col-sm-6 col-12">
                     <span class="body-p text-color-secondary">PORTFOLIO</span>
                     <h2 class="heading-2"><span class="text-span">pencapaian</span><br>terbesar kami</h2>
                 </div>
-                <div class="col-sm-4 col-12 text-sm-end text-start">
+                <div class="col-sm-6 col-12  text-sm-end text-start">
                     <p class="body-p text-color-secondary">Kami berkomitmen membangun kemajuan dan menghadirkan solusi yang berdampak positif</p>
-                    <button class="button-primary-medium">Jelajahi Lebih Lanjut</button>
+                    <button class="button-primary-medium w-auto">Jelajahi Lebih Lanjut</button>
                 </div>
             </div>
 

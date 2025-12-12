@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Responsif</title>
+    <!-- Sertakan Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            display: flex;
+            gap: 20px; /* Jarak antar bagian di desktop */
+        }
+        
+        .section {
+            flex: 1; /* Setiap bagian ambil ruang sama */
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        
+        /* Carousel container, tersembunyi di desktop */
+        .carousel-container {
+            display: none;
+        }
+        
+        /* Media query untuk layar <600px */
+        @media (max-width: 600px) {
+            .container {
+                display: none; /* Sembunyikan layout desktop */
+            }
+            .carousel-container {
+                display: block; /* Tampilkan carousel */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Layout Desktop -->
+    <div class="container">
+        <div class="section">
+            <h2>Bagian 1</h2>
+            <p>Konten bagian pertama. Ini akan ditampilkan di samping bagian kedua di desktop.</p>
+        </div>
+        <div class="section">
+            <h2>Bagian 2</h2>
+            <p>Konten bagian kedua. Di mobile, ini akan menjadi slide dalam carousel.</p>
+        </div>
+    </div>
+    
+    <!-- Carousel untuk Mobile -->
+    <div class="swiper carousel-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="section">
+                    <h2>Bagian 1</h2>
+                    <p>Konten bagian pertama.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="section">
+                    <h2>Bagian 2</h2>
+                    <p>Konten bagian kedua.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Navigasi carousel -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    
+    <!-- Sertakan Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Inisialisasi Swiper hanya jika layar <600px
+        if (window.innerWidth < 600) {
+            const swiper = new Swiper('.swiper', {
+                slidesPerView: 1, // Satu slide per tampilan
+                spaceBetween: 10,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+    </script>
+</body>
+</html>
