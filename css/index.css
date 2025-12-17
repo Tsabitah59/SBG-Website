@@ -92,7 +92,27 @@
 }
 
 /* ============================== GRUP BISNIS ============================== */
+.grup-bisnis .card-layout {
+    width: max-content;
+}
 
+.grup-bisnis .switch-button-grup-bisnis {
+    white-space: nowrap;
+}
+
+.grup-bisnis .isi-grup-bisnis {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--big-border-radius);
+}
+
+.grup-bisnis .judul-section-grup-bisnis {
+    height: 80dvh;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 59.18%, #FFF 93.64%), url(../assets/image/contoh-img.jpg) lightgray 50% / cover no-repeat;
+}
+
+.grup-bisnis .penjelasan-grup-bisnis .row {
+    padding: 16px;
+}
 
 /* ============================== RUNNING TEXT ============================== */
 .running-text {

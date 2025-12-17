@@ -178,14 +178,10 @@ nav .logo-sida {
 
 /* ============================== TAG ============================== */
 .primary-tag {
-    padding: 2px 10px;
+    padding: 6px 10px;
     border-radius: 6px;
     background: var(--primary-700);
     color: var(--white); 
-}
-
-.primary-tag span {
-    color: var(--white);
     font-size: 12px;
     font-weight: 400;
     text-align: center;
@@ -193,7 +189,7 @@ nav .logo-sida {
 
 .primary-tag-outline {
     display: inline;
-    padding: 2px 10px;
+    padding: 6px 10px;
     border-radius: 6px;
     border: 1px solid var(--primary-700);
     background: var(--primary-100);
@@ -263,6 +259,7 @@ nav .logo-sida {
     border-radius: var(--default-border-radius) !important;
     border: 1px solid var(--neutral-color) !important;
     overflow: hidden;
+    align-items: center;
     padding: 16px;
     gap: 16px;
     background: var(--thin-white);
