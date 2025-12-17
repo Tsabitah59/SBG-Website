@@ -5,7 +5,7 @@
 
 header, .section-height{
     min-height: 100dvh;
-    padding-block: 40px;
+    padding-block: 60px;
 }
 
 body{
@@ -26,7 +26,7 @@ body{
 
     /* Neutral */
     --white: #FFFFFF;
-    --thin-white: #FFFFFFB2;
+    --thin-white: #ffffff5c;
     --neutral-color: #D3CEE1;
 
     /* Text Color */

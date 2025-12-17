@@ -3,7 +3,7 @@
     background: url(../assets/image/bg-hero-img.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: 70% 0;
     height: 110dvh;
     width: 100%;
     box-shadow: 0 -86px 24.4px -60px var(--white) inset;
@@ -12,7 +12,6 @@
 /* ============================== ABOUT ============================== */
 .about .card-layout {
     overflow: visible;
-    background: var(--thin-white);
 }
 
 .about .visi-misi-button {
@@ -93,28 +92,7 @@
 }
 
 /* ============================== GRUP BISNIS ============================== */
-.grup-bisnis .grup-bisnis-penjelasan-bg {
-    height: 100dvh;
-    background: #000;
-    border-radius: 20px;
-    display: grid;
-    place-items: end;
-}
 
-.grup-bisnis .grup-bisnis-penjelasan-card{
-    background: var(--thin-white);
-    background-blend-mode: overlay;
-}
-
-.card-kelompok-grup-bisnis {
-    width: 100%;
-    display: block;
-}
-
-/* ============================== KEUNGGULAN ============================== */
-.keunggulan{
-    height: 80dvh;
-}
 
 /* ============================== RUNNING TEXT ============================== */
 .running-text {
@@ -166,6 +144,12 @@
 }
 
 @media screen and (max-width: 991.5px) {
+    .about {
+        background: linear-gradient(180deg, #FFF 4.73%, rgba(255, 255, 255, 0.80) 100%), url(../assets/image/bg-hero-img.png) /* Ganti Imagenya JANGAN LUPA */ lightgray -251.919px 1.992px / 291.415% 134.467% no-repeat;
+        background-size: cover;
+        background-position: right;
+    }
+
     .about .about-bg-img {
         display: none;
     }
@@ -205,15 +189,10 @@
         display: block;
         text-align: left !important;
     }
-    
+
     /* ============================== KEUNGGULAN ============================== */
-    /* .keunggulan .keunggulan-big-group {
-        position: relative;
-    }
-
-    .keunggulan .keunggulan-card-group .card-layout {
+    .keunggulan .keunggulan-card-group .col {
         position: absolute;
-    } */
-
+    }
 }
  
