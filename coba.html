@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data JSON yang Sudah Diolah</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                // Manipulasi data yang sudah diolah
+                const users = data.processedUsers;
+                const summary = data.summary;
+                
+                // Contoh: Filter user aktif dan hitung ulang rata-rata
+                const activeUsers = users.filter(user => user.status === 'active');
+                const newAverage = activeUsers.reduce((sum, user) => sum + user.score, 0) / activeUsers.length;
+                
+                // Tampilkan hasil
+                document.getElementById('output').innerHTML = `
+                    <h3>Data Pengguna Aktif:</h3>
+                    <pre>${JSON.stringify(activeUsers, null, 2)}</pre>
+                    <p>Rata-rata Skor Baru: ${newAverage.toFixed(2)}</p>
+                    <p>Total Pengguna Awal: ${summary.totalUsers}</p>
+                `;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>

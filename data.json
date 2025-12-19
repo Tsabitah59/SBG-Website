@@ -1,0 +1,10 @@
+{
+    "processedUsers": [
+        { "id": 1, "name": "Alice", "age": 25, "status": "active", "score": 85 },
+        { "id": 2, "name": "Bob", "age": 30, "status": "inactive", "score": 92 }
+    ],
+    "summary": {
+        "totalUsers": 2,
+        "averageScore": 88.5
+    }
+}

@@ -91,29 +91,6 @@
 
 }
 
-/* ============================== GRUP BISNIS ============================== */
-.grup-bisnis .card-layout {
-    width: max-content;
-}
-
-.grup-bisnis .switch-button-grup-bisnis {
-    white-space: nowrap;
-}
-
-.grup-bisnis .isi-grup-bisnis {
-    box-shadow: var(--box-shadow);
-    border-radius: var(--big-border-radius);
-}
-
-.grup-bisnis .judul-section-grup-bisnis {
-    height: 80dvh;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 59.18%, #FFF 93.64%), url(../assets/image/contoh-img.jpg) lightgray 50% / cover no-repeat;
-}
-
-.grup-bisnis .penjelasan-grup-bisnis .row {
-    padding: 16px;
-}
-
 /* ============================== RUNNING TEXT ============================== */
 .running-text {
     width: 100%;
@@ -142,6 +119,35 @@
   }
 }
 
+/* ============================== GRUP BISNIS ============================== */
+.grup-bisnis .switch-button-grup-bisnis {
+    white-space: nowrap;
+    grid-template-columns: repeat(3, 0fr)
+}
+
+.switch-button-grup-bisnis ::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
+}
+
+.grup-bisnis .switch-button-grup-bisnis .card-layout {
+    width: max-content;
+}
+
+.grup-bisnis .isi-grup-bisnis {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--big-border-radius);
+}
+
+.grup-bisnis .judul-section-grup-bisnis {
+    height: 80dvh;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 59.18%, #FFF 93.64%), url(../assets/image/contoh-img.jpg) lightgray 50% / cover no-repeat;
+}
+
+.grup-bisnis .penjelasan-grup-bisnis .row {
+    padding: 16px;
+}
+
 /* ============================== FAQ ============================== */
 .faq .accordian-button {
     color: var(--text-color);
@@ -164,6 +170,7 @@
 }
 
 @media screen and (max-width: 991.5px) {
+    /* ============================== ABOUT ============================== */
     .about {
         background: linear-gradient(180deg, #FFF 4.73%, rgba(255, 255, 255, 0.80) 100%), url(../assets/image/bg-hero-img.png) /* Ganti Imagenya JANGAN LUPA */ lightgray -251.919px 1.992px / 291.415% 134.467% no-repeat;
         background-size: cover;
@@ -173,14 +180,13 @@
     .about .about-bg-img {
         display: none;
     }
-
+    
     .faq .cta-faq {
         display: none;
     }
 }
 
 @media screen and (max-width: 900px) {
-    
     /* ============================== SLIDER ============================== */
     .portfolio-wrapper .portfolio-carousel{
         grid-auto-columns: calc((100% / 2) - 9px);
@@ -199,7 +205,7 @@
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575.5px) {
     /* ============================== ABOUT ============================== */
     .about .heading-2, .about .body-p {
         text-align: left !important;
@@ -209,10 +215,21 @@
         display: block;
         text-align: left !important;
     }
-
+    
     /* ============================== KEUNGGULAN ============================== */
     .keunggulan .keunggulan-card-group .col {
         position: absolute;
+    }
+    
+    /* ============================== GRUP BISNIS ============================== */
+    .grup-bisnis .switch-button-grup-bisnis .card-layout {
+        width: 180px;
+        text-wrap: wrap;
+        text-align: left;
+    }
+
+   .card-layout .primary-tag{
+        margin-bottom: 30px !important;
     }
 }
  
