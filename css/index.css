@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 70% 0;
-    height: 110dvh;
+    height: 110svh;
     width: 100%;
     box-shadow: 0 -86px 24.4px -60px var(--white) inset;
 }
@@ -100,9 +100,6 @@
     align-items: start;
 }
 
-/* .keunggulan .card-layout .primary-tag { */
-    /* margin: 0;
-} */
 /* ============================== RUNNING TEXT ============================== */
 .running-text {
     width: 100%;
@@ -198,41 +195,62 @@
     }
 }
 
-@media screen and (max-width: 900px) {
-    /* ============================== SLIDER ============================== */
-    .portfolio-wrapper .portfolio-carousel{
-        grid-auto-columns: calc((100% / 2) - 9px);
-    }
-}
-
 @media screen and (max-width: 768px) {
     
 }
- 
-@media screen and (max-width: 600px) {
-    
-    /* ============================== SLIDER ============================== */
-    .portfolio-wrapper .portfolio-carousel{
-        grid-auto-columns: 100%;
-    }
-}
+
 
 @media screen and (max-width: 575.5px) {
     /* ============================== ABOUT ============================== */
-    .about .heading-2, .about .body-p {
-        text-align: left !important;
-    }
-
     .about span.text-color-secondary  {
         display: block;
-        text-align: left !important;
     }
     
     /* ============================== KEUNGGULAN ============================== */
-    /* .keunggulan .keunggulan-card-group .col {
-        position: absolute;
-    } */
-    
+    .keunggulan .keunggulan-card-group {
+        padding-bottom: 80px;
+    }
+
+    .keunggulan .judul-keunggulan {
+        position: sticky;
+        top: 20px;
+    }
+
+    .keunggulan .keunggulan-card-group .col {
+        position: sticky;
+        top: 150px;
+    }
+
+    .keunggulan .keunggulan-card-group .col .card-layout {
+        background: var(--white);
+    }
+
+    /* efek numpuk */
+    .keunggulan .keunggulan-card-group .col:nth-child(1) {
+        transform: translateY(0px);
+        z-index: 1;
+    }
+
+    .keunggulan .keunggulan-card-group .col:nth-child(2) {
+        transform: translateY(20px);
+        z-index: 2;
+    }
+
+    .keunggulan .keunggulan-card-group .col:nth-child(3) {
+        transform: translateY(40px);
+        z-index: 3;
+    }
+
+    .keunggulan .keunggulan-card-group .col:nth-child(4) {
+        transform: translateY(60px);
+        z-index: 4;
+    }
+
+    .keunggulan .keunggulan-card-group .col:nth-child(5) {
+        transform: translateY(80px);
+        z-index: 5;
+    }
+
     /* ============================== GRUP BISNIS ============================== */
     .grup-bisnis .switch-button-grup-bisnis .card-layout {
         width: 180px;
@@ -251,5 +269,19 @@
         width: 70%;
     }
     
+}
+
+@media screen and (max-width: 378px) {
+    /* ============================== GRUP BISNIS ============================== */
+    .grup-bisnis .heading-2 {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 331px) {
+    /* ============================== GRUP BISNIS ============================== */
+    .grup-bisnis .heading-2 {
+        width: 100%;
+    }
 }
  
