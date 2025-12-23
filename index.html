@@ -124,7 +124,7 @@
     </section>
 
     <!-- ============================== KEUNGGULAN ============================== -->
-    <!-- <section id="keunggulan" class="keunggulan section-height d-flex align-items-center">
+    <section id="keunggulan" class="keunggulan d-flex align-items-center">
         <div class="container-md">
             <div class="keunggulan-big-group row row-cols-lg-3 row-cols-sm-2 row-cols-1 align-items-stretch" id="keunggulan-wrapper">
                 <div class="col my-auto text-sm-start text-center">
@@ -180,7 +180,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- ============================== RUNNING TEXT ============================== -->
     <section class="running-text">
@@ -190,17 +190,17 @@
     </section>
 
     <!-- ============================== GRUP BISNIS ============================== -->
-     <section class="grup-bisnis section-height">
+    <section class="grup-bisnis section-height">
         <div class="container-md">
             <!-- Judul Grup Bisnis -->
-            <div class="row">
+            <div class="row text-center justify-content-center">
                 <span class="body-p text-color-secondary">GRUP BISNIS</span>
                 <h2 class="heading-2">Lingkup <span class="text-span">Bisnis</span> Kami</h2>
             </div>
 
             <!-- Switch Button Grup Bisnis -->
             <div class="row">
-                <div class="switch-button-grup-bisnis col-12 d-grid gap-2 justify-content-start overflow-x-auto py-4">
+                <div class="switch-button-grup-bisnis col-12 d-grid gap-2 justify-content-xl-center justify-content-start overflow-x-scroll py-4">
                     <button class="card-layout d-sm-flex d-block">
                         <span class="primary-tag">SBK</span>
                         <h6 class="heading-6 mb-0  mt-sm-0 mt-2">SIDA BERJAYA KONSULTAN</h6 class="heading-6">
@@ -229,7 +229,7 @@
                         </section>
                         <section class="penjelasan-grup-bisnis p-sm-3 p-2 thin-white">
                             <div class="row mt-4">
-                                <div class="col-md-6 col-12 pe-3">
+                                <div class="col-md-6 col-12 pe-md-3 p-0">
                                     <div class="subjudul-penjelasan-grup-bisnis">
                                         <span class="body-p text-color-secondary">FOKUS BISNIS</span>
                                         <h4 class="heading-4 mb-4">Ruang <span class="text-span">Usaha</span></h4>
@@ -251,7 +251,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-md-6 col-12 ps-3">
+                                <div class="col-md-6 col-12 ps-md-3 p-0">
                                     <div class="subjudul-penjelasan-grup-bisnis">
                                         <span class="body-p text-color-secondary">KEUNGGULAN</span>
                                         <h4 class="heading-4 mb-4">Keunggulan <span class="text-span">Utama</span></h4>
@@ -276,7 +276,7 @@
                 </div>
             </div>
         </div>
-     </section>
+    </section>
 
     <!-- ============================== PORTFOLIO ============================== -->
     <!-- <section id="portfolio" class="section-height d-flex align-items-center">
@@ -286,12 +286,12 @@
                 <div class="col-sm-7 col-12">
                     <span class="body-p text-color-secondary">PORTFOLIO</span>
                     <h2 class="heading-2"><span class="text-span">pencapaian</span><br>terbesar kami</h2>
-                </div>
-                <div class="col-sm-5 col-12  text-sm-end text-start">
+                </div> -->
+                <!-- <div class="col-sm-5 col-12  text-sm-end text-start">
                     <p class="body-p text-color-secondary">Kami berkomitmen membangun kemajuan dan menghadirkan solusi yang berdampak positif</p>
                     <button class="button-primary-medium w-auto">Jelajahi Lebih Lanjut</button>
-                </div>
-            </div> -->
+                </div> -->
+            <!-- </div> -->
 
             <!-- Isi -->
             
@@ -433,3 +433,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/license.min.js"></script>
 </body>
 </html>
+
+<!-- 
+
+di ukuran 369 - 353 nanggung banget angka 1 nya :(
+di mobile beneran bg image suka autoscale sendiri, bikin scroll nggak nyaman
+kalo di horizontal scroll pas di section grup bisnis masih suka keliatan scrollbarnya, padahal kalo nggak dipake geser ilang gitu
+nentuin hover effect buat button, card-layout, sama efek2 lain biar nggak statis
+bikin pembagian section pake json local sama js :)
+
+-->

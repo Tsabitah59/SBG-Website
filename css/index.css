@@ -91,6 +91,18 @@
 
 }
 
+/* ============================== KEUNGGULAN ============================== */
+.keunggulan {
+    padding-block: 60px;
+}
+
+.keunggulan .card-layout {
+    align-items: start;
+}
+
+/* .keunggulan .card-layout .primary-tag { */
+    /* margin: 0;
+} */
 /* ============================== RUNNING TEXT ============================== */
 .running-text {
     width: 100%;
@@ -122,12 +134,12 @@
 /* ============================== GRUP BISNIS ============================== */
 .grup-bisnis .switch-button-grup-bisnis {
     white-space: nowrap;
-    grid-template-columns: repeat(3, 0fr)
+    grid-template-columns: repeat(3, 0fr);
+    scroll-snap-align: start !important;
 }
 
-.switch-button-grup-bisnis ::-webkit-scrollbar {
-    display: none;
-    visibility: hidden;
+.switch-button-grup-bisnis::-webkit-scrollbar {
+    display: none !important;
 }
 
 .grup-bisnis .switch-button-grup-bisnis .card-layout {
@@ -217,9 +229,9 @@
     }
     
     /* ============================== KEUNGGULAN ============================== */
-    .keunggulan .keunggulan-card-group .col {
+    /* .keunggulan .keunggulan-card-group .col {
         position: absolute;
-    }
+    } */
     
     /* ============================== GRUP BISNIS ============================== */
     .grup-bisnis .switch-button-grup-bisnis .card-layout {
@@ -228,8 +240,16 @@
         text-align: left;
     }
 
-   .card-layout .primary-tag{
-        margin-bottom: 30px !important;
+   .grup-bisnis .card-layout .primary-tag{
+       margin-bottom: 30px !important;
     }
+}
+
+@media screen and (max-width: 440px) {
+    /* ============================== GRUP BISNIS ============================== */
+    .grup-bisnis .heading-2 {
+        width: 70%;
+    }
+    
 }
  
