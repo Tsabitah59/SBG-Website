@@ -1,25 +1,18 @@
 // ============================== NAVBAR ==============================
-// const navbar = document.getElementsByTagName('nav')[0];
-// const logo = document.getElementById('logo-sida');
+const navbar = document.getElementsByTagName('nav')[0];
+const logo = document.getElementById('logo-sida');
+const backdrop = document.querySelector('.navbar-backdrop');
 
-// window.addEventListener('scroll', function(){
-//     if(window.scrollY > 1){
-//         console.log(this.window.scrollY);
-//         navbar.classList.replace('bg-transparent', 'nav-color');
-//         navbar.classList.remove('navbar-dark');
-//         logo.src = 'assets/logo/logo-color.svg';
-//     } else if(this.window.scrollY <= 0){
-//         navbar.classList.replace('nav-color', 'bg-transparent');
-//         navbar.classList.add('navbar-dark');
-//         logo.src = 'assets/logo/logo-white.svg';
-//     }
-// });
+window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 1;
 
-// function offcanvasAdaptation() {
-//     if (window.innerWidth > 991) {
-        
-//     }
-// }
+    navbar.classList.toggle('nav-color', scrolled);
+    navbar.classList.toggle('bg-transparent', !scrolled);
+
+    backdrop.classList.toggle('active', scrolled);
+
+    logo.src = scrolled ? 'assets/logo/logo-color.svg' : 'assets/logo/logo-white.svg';
+});
 
 // ============================== GRUP BISNIS ==============================
 

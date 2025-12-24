@@ -35,35 +35,39 @@
             </button>
 
             <!-- Body (yang nanti ada di opsi offcanvas) -->
-            <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
                         <img src="assets/logo/logo-row-color.svg">
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body d-flex flex-md-row flex-column">
-                    <ul class="navbar-nav mx-md-auto mx-0 my-auto mb-5 mb-md-0 flex-md-grow-0 flex-grow-1 pe-3">
+                <div class="offcanvas-body overflow-hidden d-flex flex-md-row flex-column align-items-center flex-md-grow-0 flex-grow-1 pe-3">
+                    <!--  -->
+                    <ul class="navbar-nav mx-md-auto mx-0 my-auto">
                         <li class="nav-item">
-                            <a class="nav-link body-p" href="#header">Beranda</a>
+                            <a class="nav-link body-p mx-auto" href="#header">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link body-p" href="#about">Profil</a>
+                            <a class="nav-link body-p mx-auto" href="#about">Profil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link body-p" href="#grup">Grup Bisnis</a>
+                            <a class="nav-link body-p mx-auto" href="#keunggulan">Keuntungan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link body-p" href="#keunggulan">Keuntungan</a>
+                            <a class="nav-link body-p mx-auto" href="#grup">Grup Bisnis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link body-p" href="#portfolio">Portfolio</a>
+                            <a class="nav-link body-p mx-auto" href="#portfolio">Portfolio</a>
                         </li>
                     </ul>
                     <a href="#" class="button-primary-medium">Hubungi Kami</a>
                 </div>
             </div>
         </div>
+
+        <!-- Buat Bg + Backdrop filter -->
+        <div class="navbar-backdrop"></div>
     </nav>
 
     <!-- ============================== HERO ============================== -->
@@ -204,7 +208,7 @@
     </section>
 
     <!-- ============================== GRUP BISNIS ============================== -->
-    <section class="grup-bisnis section-height">
+    <section id="keunggulan" class="grup-bisnis section-height">
         <div class="container-md">
             <!-- Judul Grup Bisnis -->
             <div class="row text-center justify-content-center">
