@@ -146,22 +146,37 @@ nav .logo-sida {
     width: 70px;
 }
 
-.nav-color {
+nav .nav-color {
     background: var(--thin-white);
     background-blend-mode: overlay;
     transition: var(--default-duration);
     backdrop-filter: blur(8.25px);
 }
 
-.navbar-toggler{
+nav .navbar-toggler{
     border: none !important;
     background: none !important;
     padding: 0 !important;
     color: transparent !important;
 }
 
-.navbar-toggler-icon {
+nav .navbar-toggler-icon {
     background-image: none !important;
+    display: grid;
+    place-items: center;
+}
+
+nav .offcanvas .offcanvas-title img {
+    width: 60%;
+}
+
+.nav-link.body-p {
+    width: max-content;
+    color: var(--text-secondary);
+}
+
+.nav-link.body-p:hover {
+    color: var(--text-color);
 }
 
 .nav-link.body-p::after {
@@ -172,6 +187,7 @@ nav .logo-sida {
     background-color: var(--primary-700);
     transition: var(--default-duration);
 }
+
 .nav-link.body-p.active::after, .nav-link.body-p:hover::after {
     width: 100%;
 }
@@ -187,18 +203,15 @@ nav .logo-sida {
     text-align: center;
 }
 
-.primary-tag-outline {
-    display: inline;
+.primary-tag-white {
+    width: max-content;
     padding: 6px 10px;
     border-radius: 6px;
-    border: 1px solid var(--primary-700);
-    background: var(--primary-100);
-}
-
-.primary-tag-outline span {
+    background: var(--white);
     color: var(--primary-700);
     font-size: 12px;
     font-weight: 400;
+    text-align: center;
 }
 
 .primary-tag-big {
@@ -264,112 +277,6 @@ nav .logo-sida {
     background: var(--thin-white);
     background-blend-mode: overlay;
     backdrop-filter: blur(8.25px);
-}
-
-/* ============================== SLIDER ============================== */
-.portfolio-wrapper {
-    max-width: 1100px;
-    width: 100%;
-} 
-
-.portfolio-wrapper i {
-    height: 50px;
-    width: 50px;
-    padding: 10px;
-    display: grid;
-    place-items: center;
-    background: var(--secondary-500);
-    color: var(--white);
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    box-shadow: var(--box-shadow);
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.portfolio-wrapper i:first-child{
-    left: -22px;
-}
-
-.portfolio-wrapper i:last-child{
-    padding-left: 15px;
-    right: -22px;
-}
-
-.portfolio-wrapper .portfolio-carousel{
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 4) - 12px);
-    gap: 16px;
-    scroll-behavior: smooth;
-    overflow-x: auto;
-    padding-block: 20px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: 0;
-    padding-left: 0 !important;
-}
-
-.portfolio-wrapper .portfolio-carousel::-webkit-scrollbar{
-    display: none;
-}
-
-.portfolio-carousel :where(.portfolio-card, .portfolio-img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.portfolio-card.dragging{
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-}
-
-.portfolio-carousel.dragging .portfolio-card{
-    cursor: grab;
-    user-select: none;
-}
-
-.portfolio-carousel.no-transition {
-    scroll-behavior: auto;
-}
-
-.portfolio-carousel .portfolio-card {
-    scroll-snap-align: start;
-    list-style: none;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    transition: var(--default-duration);
-    position: relative;
-}
-
-.portfolio-carousel .portfolio-card:hover {
-    scale: 1.1;
-}
-
-.portfolio-card .text-color-secondary{
-    margin-inline: 20px;
-}
-
-.portfolio-card .portfolio-img img {
-    width: 100%;
-    align-self: stretch;
-    border-radius: var(--Small-Radius) 0 0 var(--Small-Radius);
-}
-
-.portfolio-card h6{
-    height: 72px;
-    overflow: hidden;
-    margin-inline: 20px;
-}
-
-.portfolio-card h6::after{
-    content: "...";
-    width: 100px;
 }
 
 /* ============================== FOOTER ============================== */
@@ -445,32 +352,14 @@ nav .logo-sida {
 @media screen and (max-width: 991px) {
 }
 
-@media screen and (max-width: 900px) {
-    
-    /* ============================== SLIDER ============================== */
-    .portfolio-wrapper .portfolio-carousel{
-        grid-auto-columns: calc((100% / 2) - 9px);
-    }
-}
- 
-@media screen and (max-width: 600px) {
-    
-    /* ============================== SLIDER ============================== */
-    .portfolio-wrapper .portfolio-carousel{
-        grid-auto-columns: 100%;
-    }
-}
-
 @media screen and (max-width: 768px) {
-    .portfolio-wrapper i:first-child{
-    left: 0;
-}
 
-.portfolio-wrapper i:last-child{
-    right: 0;
-}
 }
     
-@media screen and (max-width: px) {
+@media screen and (max-width: 576px) {
+    /* ============================== NAVBAR ============================== */
+    nav .offcanvas .offcanvas-title img {
+        width: 80%;
+    }
 }
  

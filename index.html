@@ -13,43 +13,55 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/logo/favicon-logo.svg" type="image/x-icon">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css">
 </head>
 <body>
     <!-- ============================== NAVBAR ============================== -->
-    <nav class="navbar bg-transparent navbar-dark navbar-expand-lg fixed-top">
+    <nav class="navbar bg-transparent navbar-expand-md fixed-top">
         <div class="container-md">
+
+            <!-- Logo -->
             <a class="navbar-brand" href="#">
                 <img id="logo-sida" class="logo-sida" src="assets/logo/logo-white.svg" alt="SIDA Berjaya Group">
             </a>
+
+            <!-- Toggler -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <i class="fi fi-rr-menu-burger navbar-toggler-icon"></i>
+                <i class="fi fi-rr-menu-burger navbar-toggler-icon"></i>
             </button>
-            <div class="offcanvas offcanvas-start w-auto" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body align-items-center">
-                <ul class="navbar-nav mx-auto my-auto mb-2 mb-lg-0 justify-content-end flex-lg-grow-0 flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <a class="nav-link body-p" href="#header">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link body-p" href="#about">Profil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link body-p" href="#grup">Grup Bisnis</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link body-p" href="#keunggulan">Keuntungan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link body-p" href="#portfolio">Portfolio</a>
-                    </li>
-                </ul>
-                <a href="#" class="button-primary-medium">Hubungi Kami</a>
-            </div>
+
+            <!-- Body (yang nanti ada di opsi offcanvas) -->
+            <div class="offcanvas offcanvas-start w-50" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        <img src="assets/logo/logo-row-color.svg">
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-md-row flex-column">
+                    <ul class="navbar-nav mx-md-auto mx-0 my-auto mb-5 mb-md-0 flex-md-grow-0 flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link body-p" href="#header">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link body-p" href="#about">Profil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link body-p" href="#grup">Grup Bisnis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link body-p" href="#keunggulan">Keuntungan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link body-p" href="#portfolio">Portfolio</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="button-primary-medium">Hubungi Kami</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -281,17 +293,71 @@
     </section>
 
     <!-- ============================== PORTFOLIO ============================== -->
-    <section id="portfolio" class="section-height d-flex align-items-center">
+    <section id="portfolio" class="portfolio section-height d-flex align-items-center">
         <div class="container-md">
             <!-- Judul -->
             <div class="row align-items-center justify-content-between">
                 <span class="body-p text-color-secondary">PORTFOLIO</span>
-                <h2 class="heading-2"><span class="text-span">pencapaian</span><br>terbesar kami</h2>
+                <h2 class="heading-2 mb-4"><span class="text-span">pencapaian</span><br>terbesar kami</h2>
             </div>
 
             <!-- Isi -->
-            <section class="isi-portfolio">
-                
+            <section class="row isi-portfolio">
+
+                <!-- Part 1 -->
+                <div class="col-6">
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-desc p-3">
+                            <span class="primary-tag-white mb-2">SIDA BERJAYA ENERGI</span>
+                            <h4 class="heading-4">SIDAsafe</h4>
+                            <p class="mb-0 text-white">layanan transportasi online dengan kendaraan listrik khusus perempuan yang inovatif di Indonesia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-desc p-3">
+                            <span class="primary-tag-white mb-2">SIDA BERJAYA ENERGI</span>
+                            <h4 class="heading-4">SIDAsafe</h4>
+                            <p class="mb-0 text-white">layanan transportasi online dengan kendaraan listrik khusus perempuan yang inovatif di Indonesia</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-desc p-3">
+                            <span class="primary-tag-white mb-2">SIDA BERJAYA ENERGI</span>
+                            <h4 class="heading-4">SIDAsafe</h4>
+                            <p class="mb-0 text-white">layanan transportasi online dengan kendaraan listrik khusus perempuan yang inovatif di Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Part 2 -->
+                <!-- <div class="col-6">
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-desc p-3">
+                            <span class="primary-tag-white mb-2">SIDA BERJAYA ENERGI</span>
+                            <h4 class="heading-4">SIDAsafe</h4>
+                            <p class="mb-0 text-white">layanan transportasi online dengan kendaraan listrik khusus perempuan yang inovatif di Indonesia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-desc p-3">
+                            <span class="primary-tag-white mb-2">SIDA BERJAYA ENERGI</span>
+                            <h4 class="heading-4">SIDAsafe</h4>
+                            <p class="mb-0 text-white">layanan transportasi online dengan kendaraan listrik khusus perempuan yang inovatif di Indonesia</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-desc p-3">
+                            <span class="primary-tag-white mb-2">SIDA BERJAYA ENERGI</span>
+                            <h4 class="heading-4">SIDAsafe</h4>
+                            <p class="mb-0 text-white">layanan transportasi online dengan kendaraan listrik khusus perempuan yang inovatif di Indonesia</p>
+                        </div>
+                    </div>
+                </div> -->
+
             </section>
         </div>
     </section>
