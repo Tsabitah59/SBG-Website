@@ -156,13 +156,13 @@
 }
 
 /* ============================== PORTFOLIO ============================== */
-.portfolio .isi-portfolio .col-6 {
+.portfolio .isi-portfolio .portfolio-card-bento {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
 }
 
-.portfolio .isi-portfolio .col-6:last-child {
+.portfolio .isi-portfolio .portfolio-card-bento:last-child {
     flex-wrap: wrap-reverse;
 }
 

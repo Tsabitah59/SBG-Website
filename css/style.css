@@ -18,7 +18,7 @@ body{
     --primary-50: #F4E8FD;
     --primary-100: #E1CAEF;
     --primary-200: #CDACE2;
-    --primary-500: #9054B8;
+    --primary-500: #9054b8;
     --primary-600: #7A36AA;
     --primary-700: #63109C; /* The Color */
 
@@ -295,9 +295,34 @@ nav .offcanvas .offcanvas-title img {
     padding: 16px;
     gap: 16px;
     background: var(--thin-white);
+    overflow: hidden;
     background-blend-mode: overlay;
     backdrop-filter: blur(8.25px);
 }
+
+.card-layout::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    #9054b895
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.card-layout:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
 
 /* ============================== FOOTER ============================== */
 .footer {
