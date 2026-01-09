@@ -27,19 +27,18 @@ async function loadData() {
             throw new Error('Gagal memuat file JSON');
         }
         data = await response.json();
-        createButtons(); // Buat tombol untuk setiap sub-bisnis
-        renderSubBusiness(currentIndex); // Render yang pertama dulu
+        createButtons(); // Tombol tab controller Sub Bisnis
+        renderSubBusiness(currentIndex); // Render yang pertama
     } catch (error) {
         console.error('Error:', error);
         document.getElementById('content').innerHTML = '<p>Gagal memuat data. Pastikan file JSON ada dan server lokal berjalan.</p>';
     }
 }
 
-// Button Grup Bisnis
+// Grup Bisnis Button
 function createButtons() {
     const subBisinsButton = document.getElementById('switch-button-grup-bisnis');
     data.subBusinesses.forEach((sub, index) => {
-        // Button
         const button = document.createElement('button');
         button.classList.add('card-layout', 'd-sm-flex', 'd-block');
         
@@ -53,7 +52,6 @@ function createButtons() {
         h6.classList.add('heading-6', 'mb-0', 'mt-sm-0', 'mt-2');
         h6.textContent = sub.name;
         
-        // Tambahkan span dan h6 ke dalam button
         button.appendChild(span);
         button.appendChild(h6);
         
@@ -69,14 +67,64 @@ function createButtons() {
     });
 }
 
-// Sub Bisnis Content
+// Grup Bisnis Content
 function renderSubBusiness(index) {
     const sub = data.subBusinesses[index];
+
+    // Title & Description
     var subBisnisTitle = document.getElementById('sub-bisnis-title');
     var subBisnisDescription = document.getElementById('sub-bisnis-desc');
-
+    
     subBisnisTitle.innerHTML = sub.name;
     subBisnisDescription.innerHTML = sub.description;
+    
+    // Fokus Bisnis
+    var focusBusiness = sub.focusBusiness;
+    var wrapListFokusBisnisGrupBisnis = document.getElementById('fokus-bisnis-grup-bisnis');
+    wrapListFokusBisnisGrupBisnis.innerHTML = '';
+
+    // Loop melalui array focusBusiness
+    focusBusiness.forEach((item, index) => {
+        const listForGrupBisnisData = document.createElement('li');
+        listForGrupBisnisData.className = 'd-flex gap-2 align-items-center mb-3';
+            
+        const tagFokusBisnisGrupBisnis = document.createElement('span');
+        tagFokusBisnisGrupBisnis.className = 'primary-tag';
+        tagFokusBisnisGrupBisnis.textContent = index + 1; 
+            
+        const dataPenjelasanKeunggulanGrupBisnis = document.createElement('p');
+        dataPenjelasanKeunggulanGrupBisnis.className = 'heading-6 mb-0';
+        dataPenjelasanKeunggulanGrupBisnis.textContent = item;
+            
+        listForGrupBisnisData.appendChild(tagFokusBisnisGrupBisnis);
+        listForGrupBisnisData.appendChild(dataPenjelasanKeunggulanGrupBisnis);
+            
+        wrapListFokusBisnisGrupBisnis.appendChild(listForGrupBisnisData);
+    });
+    
+    // Keunggulan
+    var keyAdvantages = sub.keyAdvantages;
+    var wrapListKeunggulanGrupBisnis = document.getElementById('keunggulan-grup-bisnis');
+    wrapListKeunggulanGrupBisnis.innerHTML = '';
+
+    // Loop melalui array keyAdvantages
+    keyAdvantages.forEach((item, index) => {
+        const listForGrupBisnisData = document.createElement('li');
+        listForGrupBisnisData.className = 'd-flex gap-2 align-items-center mb-3';
+            
+        const tagKeunggulanGrupBisnis = document.createElement('span');
+        tagKeunggulanGrupBisnis.className = 'primary-tag';
+        tagKeunggulanGrupBisnis.textContent = index + 1; 
+            
+        const dataPenjelasanKeunggulanGrupBisnis = document.createElement('p');
+        dataPenjelasanKeunggulanGrupBisnis.className = 'heading-6 mb-0';
+        dataPenjelasanKeunggulanGrupBisnis.textContent = item;
+            
+        listForGrupBisnisData.appendChild(tagKeunggulanGrupBisnis);
+        listForGrupBisnisData.appendChild(dataPenjelasanKeunggulanGrupBisnis);
+            
+        wrapListKeunggulanGrupBisnis.appendChild(listForGrupBisnisData);
+    });
 }
 
 // Style Update Button

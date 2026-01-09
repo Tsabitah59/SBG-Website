@@ -145,7 +145,6 @@
     white-space: nowrap;
 }
 
-/* Masih sementara, nanti di-update  */
 .grup-bisnis .switch-button-grup-bisnis .card-layout.active {
     background: var(--primary-100);
 }
