@@ -3,226 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Profile - XYZ Corp</title>
+    <title>Sub Bisnis SIDA</title>
     <style>
-        /* Reset dan gaya umum */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        h1, h2, h3 {
-            margin-bottom: 20px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-
-        /* Header */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-        nav ul li {
-            margin-left: 20px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(to right, #4CAF50, #2196F3);
-            color: #fff;
-            padding: 100px 0;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3em;
-        }
-        .hero p {
-            font-size: 1.2em;
-        }
-
-        /* About Section */
-        .about {
-            padding: 50px 0;
-            height: 300dvh;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        /* Services Section dengan Stacking Cards */
-        .services {
-            padding: 50px 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        .services h2 {
-            margin-bottom: 40px;
-        }
-        
-        .stack {
-        max-width: 400px;
-        margin: 100px auto;
-        }
-
-        .card {
-        position: sticky;
-        top: 100px;
-        background: white;
-        border-radius: 16px;
-        padding: 24px;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-.keunggulan {
-  padding: 200px 0;
-}
-
-.keunggulan-card-group {
-  width: 360px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.stack .card {
-  position: sticky;
-  top: 120px;
-
-  background: white;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-
-  transition: transform 0.3s ease;
-}
-
-/* offset numpuk */
-/* .stack .card:nth-child(1) { transform: translateY(0); z-index: 1; }
-.stack .card:nth-child(2) { transform: translateY(20px); z-index: 2; }
-.stack .card:nth-child(3) { transform: translateY(40px); z-index: 3; }
-.stack .card:nth-child(4) { transform: translateY(60px); z-index: 4; }
-.stack .card:nth-child(5) { transform: translateY(80px); z-index: 5; } */
-
-/* saat .card nyentuh top */
-.stack .card.is-stuck {
-  transform: scale(0.95);
-}
-
-/* combine offset + scale (ini penting) */
-.stack .card:nth-child(2).is-stuck { transform: translateY(20px) scale(0.95); }
-.stack .card:nth-child(3).is-stuck { transform: translateY(40px) scale(0.95); }
-.stack .card:nth-child(4).is-stuck { transform: translateY(60px) scale(0.95); }
-.stack .card:nth-child(5).is-stuck { transform: translateY(80px) scale(0.95); }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .sub-business { border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; }
+        h2 { color: #333; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 5px; }
+        button { margin: 5px; padding: 10px; cursor: pointer; }
+        #nav-buttons { text-align: center; margin-bottom: 20px; }
+        .active { background-color: #4CAF50; color: white; } /* Styling untuk tombol aktif */
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>XYZ Corp</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">Tentang Kami</a></li>
-                    <li><a href="#services">Layanan</a></li>
-                    <li><a href="#contact">Kontak</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Selamat Datang di XYZ Corp</h1>
-            <p>Kami adalah perusahaan terdepan dalam inovasi teknologi dan solusi bisnis.</p>
-        </div>
-    </section>
-    
-    <!-- Services Section dengan Stacking Cards -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Layanan Kami</h2>
-            <section class="stack">
-                <div class="card">Card 1</div>
-                <div class="card">Card 2</div>
-                <div class="card">Card 3</div>
-                <div class="card">Card 4</div>
-                <div class="card">Card 5</div>
-            </section>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Tentang Kami</h2>
-            <p>XYZ Corp didirikan pada tahun 2010 dengan misi untuk memberikan solusi teknologi yang inovatif dan berkelanjutan. Kami memiliki tim ahli yang siap membantu bisnis Anda berkembang.</p>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; 2023 XYZ Corp. Semua hak dilindungi. | Kontak: info@xyzcorp.com</p>
-        </div>
-    </footer>
+    <h1>Daftar Sub Bisnis SIDA</h1>
+    <div id="nav-buttons"></div> <!-- Tombol akan dibuat dinamis di sini -->
+    <div id="content"></div>
 
     <script>
-const cards = document.querySelectorAll('.card');
+        let currentIndex = 0; // Mulai dari sub-bisnis pertama (index 0)
+        let data; // Untuk menyimpan data JSON
+        let buttons = []; // Array untuk menyimpan referensi tombol
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        entry.target.classList.add('is-stuck');
-      } else {
-        entry.target.classList.remove('is-stuck');
-      }
-    });
-  },
-  {
-    threshold: 1,
-    rootMargin: '-120px 0px 0px 0px'
-  }
-);
+        // Fungsi untuk memuat JSON lokal
+        async function loadData() {
+            try {
+                const response = await fetch('data.json');
+                if (!response.ok) {
+                    throw new Error('Gagal memuat file JSON');
+                }
+                data = await response.json();
+                createButtons(); // Buat tombol untuk setiap sub-bisnis
+                renderSubBusiness(currentIndex); // Render yang pertama dulu
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('content').innerHTML = '<p>Gagal memuat data. Pastikan file JSON ada dan server lokal berjalan.</p>';
+            }
+        }
 
-cards.forEach(card => observer.observe(card));
-</script>
+        // Fungsi untuk membuat tombol dinamis
+        function createButtons() {
+            const navButtons = document.getElementById('nav-buttons');
+            data.subBusinesses.forEach((sub, index) => {
+                const button = document.createElement('button');
+                button.textContent = sub.name; // Nama sub-bisnis sebagai teks tombol
+                button.addEventListener('click', () => {
+                    currentIndex = index; // Set index berdasarkan tombol yang diklik
+                    renderSubBusiness(currentIndex);
+                    updateActiveButton(index); // Update styling tombol aktif
+                });
+                navButtons.appendChild(button);
+                buttons.push(button); // Simpan referensi tombol
+            });
+        }
 
+        // Fungsi untuk render sub-bisnis berdasarkan index
+        function renderSubBusiness(index) {
+            const content = document.getElementById('content');
+            const sub = data.subBusinesses[index];
+            
+            content.innerHTML = `
+                <div class="sub-business">
+                    <h2>${sub.name}</h2>
+                    <p><strong>Deskripsi:</strong> ${sub.description}</p>
+                    <p><strong>Fokus Bisnis:</strong></p>
+                    <ul>
+                        ${sub.focusBusiness.map(item => `<li>${item.replace(/\n/g, '<br>')}</li>`).join('')}
+                    </ul>
+                    <p><strong>Keunggulan Utama:</strong></p>
+                    <ul>
+                        ${sub.keyAdvantages.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
+        // Fungsi untuk update styling tombol aktif
+        function updateActiveButton(activeIndex) {
+            buttons.forEach((btn, index) => {
+                if (index === activeIndex) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        // Panggil fungsi saat halaman dimuat
+        window.onload = loadData;
+    </script>
 </body>
 </html>

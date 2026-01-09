@@ -141,6 +141,11 @@
     width: max-content;
 }
 
+/* Masih sementara, nanti di-update  */
+.grup-bisnis .switch-button-grup-bisnis .card-layout.active {
+    background: var(--primary-700);
+}
+
 .grup-bisnis .isi-grup-bisnis {
     box-shadow: var(--box-shadow);
     border-radius: var(--big-border-radius);

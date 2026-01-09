@@ -300,30 +300,6 @@ nav .offcanvas .offcanvas-title img {
     backdrop-filter: blur(8.25px);
 }
 
-.card-layout::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    0deg, 
-    transparent, 
-    transparent 30%, 
-    #9054b895
-  );
-  transform: rotate(-45deg);
-  transition: all 0.5s ease;
-  opacity: 0;
-}
-
-.card-layout:hover::before {
-  opacity: 1;
-  transform: rotate(-45deg) translateY(100%);
-}
-
-
 /* ============================== FOOTER ============================== */
 .footer {
     background: var(--primary-700);

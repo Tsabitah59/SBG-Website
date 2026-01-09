@@ -1,10 +1,51 @@
 {
-    "processedUsers": [
-        { "id": 1, "name": "Alice", "age": 25, "status": "active", "score": 85 },
-        { "id": 2, "name": "Bob", "age": 30, "status": "inactive", "score": 92 }
-    ],
-    "summary": {
-        "totalUsers": 2,
-        "averageScore": 88.5
-    }
+    "subBusinesses": [
+        {   
+            "tag": "SBK",
+            "name": "SIDA BERJAYA KONSULTAN",
+            "description": "Menyediakan layanan konsultasi ahli dalam fasilitasi impor dan kepabeanan, membantu klien memperlancar operasional, memastikan kepatuhan, serta meminimalkan resiko bisnis.",
+            "focusBusiness": [
+                "Layanan Kepabeanan dan Distribusi",
+                "Kemitraan strategis dengan VinFast Auto, menangani impor 7.000-unit kendaraan listrik (EV).",
+                "Penjaminan kualitas dan inspeksi kendaraan listrik impor sebelum pengoperasian."
+            ],
+            "keyAdvantages": [
+                "Mempercepat dan menyederhanakan proses operasional klien.",
+                "Memastikan kepatuhan penuh terhadap regulasi, birokrasi, dan ketentuan kepabeanan.",
+                "Menyediakan strategi berbasis solusi untuk mendukung pertumbuhan bisnis yang berkelanjutan."
+            ]
+        },
+
+        {
+            "tag": "SBE",
+            "name": "SIDA BERJAYA ENERGI",
+            "description": "Mendorong transisi menuju energi berkelanjutan melalui solusi energi terbarukan, infrastruktur pengisian kendaraan listrik, serta SIDAsafe, layanan transportasi online dengan kendaraan listrik khusus perempuan yang inovatif di Indonesia.",
+            "focusBusiness": [
+                "Impor & Instalasi Charger Kendaraan Listrik\n Bermitra dengan V-Green dalam impor dan penempatan 5.000 unit \n Charger di Indonesia.",
+                "Layanan Transportasi Online Khusus Perempuan (SIDAsafe.com)\n - Batch 1 – 10.000 unit motor hybrid\n - Batch 1 – 1.500 unit mobil listrik (EV)",
+                "Layanan Transportasi Online Khusus Perempuan (SIDAsafe.com)\n - Batch 1 – 10.000 unit motor hybrid\n - Batch 1 – 1.500 unit mobil listrik (EV)"
+            ],
+            "keyAdvantages": [
+                "Mendukung terciptanya ekosistem transportasi ramah lingkungan",
+                "Menjamin keamanan dan kenyaman bagi perempuan dan anak",
+                "Menyediakan solusi infrastruktur energi terbarukan"
+            ]
+        },
+
+        {
+            "tag": "SJK",
+            "name": "SIDA JAYA KONSTRUKSI",
+            "description": "Menyediakan solusi konstruksi menyeluruh , mulai dari pengembangan lahan, layanan desain & bangun, hingga pengembangan SIDA Tower sebagai ikon gedung perkantoran dan bisnis masa depan.",
+            "focusBusiness": [
+                "Desain dan Konstruksi",
+                "Pengembangan SIDA Tower (27 lantai + 2 basement)",
+                "Pengembangan lahan untuk proyek komersial\n dan residensial"
+            ],
+            "keyAdvantages": [
+                "Hasil berkualitas tinggi sesuai kebutuhan klien",
+                "Dukungan menyeluruh dari perencanaan, desain, hingga eksekusi proyek",
+                "Berkontribusi pada pengembangan infrastruktur modern"
+            ]
+        }
+    ]
 }
