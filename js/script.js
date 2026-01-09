@@ -15,9 +15,9 @@ window.addEventListener('scroll', () => {
 });
 
 // ============================== GRUP BISNIS ==============================
-let currentIndex = 0; // Mulai dari sub-bisnis pertama (index 0)
-let data; // Untuk menyimpan data JSON
-let buttons = []; // Array untuk menyimpan referensi tombol
+let currentIndex = 0; // Sub bisnis pertama
+let data; // Data JSON
+let buttons = []; // Array untuk tombol
 
 // JSON Load
 async function loadData() {

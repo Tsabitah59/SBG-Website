@@ -290,14 +290,27 @@ nav .offcanvas .offcanvas-title img {
 .card-layout {
     border-radius: var(--default-border-radius) !important;
     border: 1px solid var(--neutral-color) !important;
-    outline: 1px solid transparent;
     align-items: center;
+    outline: 1px solid transparent;
     padding: 16px;
     gap: 16px;
     background: var(--thin-white);
     overflow: hidden;
     background-blend-mode: overlay;
     backdrop-filter: blur(8.25px);
+    transition: var(--default-duration);
+}
+.card-layout:hover {
+    border: 1px solid var(--primary-100) !important;
+    outline-offset: 3px;
+    outline: 1px solid var(--primary-700);
+    scale: 1.02;
+}
+
+.card-layout.dont-hover:hover {
+    scale: 1;
+    border: 1px solid var(--neutral-color) !important;
+    outline: 1px solid transparent;
 }
 
 /* ============================== FOOTER ============================== */

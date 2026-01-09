@@ -128,9 +128,11 @@
 
 /* ============================== GRUP BISNIS ============================== */
 .grup-bisnis .switch-button-grup-bisnis {
-    white-space: nowrap;
-    grid-template-columns: repeat(3, 0fr);
-    scroll-snap-align: start !important;
+    overflow-x: auto;           /* Aktifkan scroll horizontal jika overflow */
+    overflow-y: hidden;         /* Sembunyikan scroll vertikal jika ada */
+    white-space: nowrap;        /* Opsional: cegah teks wrap di dalam tombol */
+    gap: 1rem;                  /* Opsional: beri jarak antar tombol (sesuaikan dengan desainmu) */
+    scroll-snap-type: x mandatory; /* Aktifkan snap horizontal untuk pengalaman scroll yang smooth */
 }
 
 .switch-button-grup-bisnis::-webkit-scrollbar {
@@ -139,11 +141,20 @@
 
 .grup-bisnis .switch-button-grup-bisnis .card-layout {
     width: max-content;
+    min-width: max-content;
+    white-space: nowrap;
 }
 
 /* Masih sementara, nanti di-update  */
 .grup-bisnis .switch-button-grup-bisnis .card-layout.active {
-    background: var(--primary-700);
+    background: var(--primary-100);
+}
+
+.grup-bisnis .switch-button-grup-bisnis .card-layout.active:hover {
+    border: 1px solid var(--primary-100) !important;
+    outline-offset: 3px;
+    outline: 1px solid var(--primary-700);
+    scale: 1.02;
 }
 
 .grup-bisnis .isi-grup-bisnis {
@@ -167,7 +178,7 @@
     gap: 16px;
 }
 
-.portfolio .isi-portfolio .portfolio-card-bento:last-child {
+.portfolio .isi-portfolio .portfolio-card-bento:nth-child(even) {
     flex-wrap: wrap-reverse;
 }
 
