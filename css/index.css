@@ -275,6 +275,8 @@
     .about span.text-color-secondary  {
         display: block;
     }
+
+
     
     /* ============================== KEUNGGULAN ============================== */
     .keunggulan .keunggulan-card-group {
@@ -323,9 +325,9 @@
 
     /* ============================== GRUP BISNIS ============================== */
     .grup-bisnis .switch-button-grup-bisnis .card-layout {
-        width: 180px;
-        text-wrap: wrap;
+        min-width: 180px !important;
         text-align: left;
+        white-space: wrap;
     }
 
    .grup-bisnis .card-layout .primary-tag{
