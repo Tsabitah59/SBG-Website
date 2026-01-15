@@ -246,6 +246,15 @@
     body {
         font-size: 70%;
     }
+
+    /* ============================== PORTFOLIO ============================== */
+    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -65px;
+    }
+
+    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
+        bottom: -50px;
+    }
 }
 
 @media screen and (max-width: 991.5px) {
@@ -255,7 +264,7 @@
         background-size: cover;
         background-position: right;
     }
-
+    
     .about .about-bg-img {
         display: none;
     }
@@ -263,12 +272,61 @@
     .faq .cta-faq {
         display: none;
     }
+
+    /* ============================== PORTFOLIO ============================== */
+    .portfolio .isi-portfolio .portfolio-card:last-child {
+        height: 250px;
+    }
+
+    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -65px;
+    }
+    
+    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
+        bottom: -65px;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
     
 }
 
+@media screen and (max-width: 692px) {
+    /* ============================== PORTFOLIO ============================== */
+    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -86px;
+    }
+    
+    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
+        bottom: -86px;
+    }
+}
+
+@media screen and (max-width: 655.5px) {
+    /* ============================== PORTFOLIO ============================== */
+    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -50px;
+    }
+    
+    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
+        bottom: -30px;
+    }
+}
+
+@media screen and (max-width: 611px) {
+    /* ============================== PORTFOLIO ============================== */
+    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -66px;
+    }
+}
+
+@media screen and (max-width: 611px) {
+    /* ============================== PORTFOLIO ============================== */
+    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
+        bottom: -36px;
+    }
+}
 
 @media screen and (max-width: 575.5px) {
     /* ============================== ABOUT ============================== */
@@ -335,12 +393,32 @@
     }
 }
 
+@media screen and (max-width: 543px) {
+    /* ============================== PORTFOLIO ============================== */
+    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
+        bottom: -50px;
+    }
+}
+
+@media screen and (max-width: 463.5px) {
+    /* ============================== PORTFOLIO ============================== */
+    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -80px;
+    }
+}
+
 @media screen and (max-width: 440px) {
     /* ============================== GRUP BISNIS ============================== */
     .grup-bisnis .heading-2 {
         width: 70%;
     }
-    
+}
+
+@media screen and (max-width: 439.5px) {
+    /* ============================== PORTFOLIO ============================== */
+    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -50px;
+    }
 }
 
 @media screen and (max-width: 378px) {
