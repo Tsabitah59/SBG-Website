@@ -78,6 +78,12 @@ function renderSubBusiness(index) {
     subBisnisTitle.innerHTML = sub.name;
     subBisnisDescription.innerHTML = sub.description;
     
+    // Update background image berdasarkan imageUrl dari JSON
+    const judulSectionGrupBisnis = document.querySelector('.judul-section-grup-bisnis');
+    if (sub.imageUrl) {
+        judulSectionGrupBisnis.style.background = `linear-gradient(180deg, rgba(255, 255, 255, 0.00) 59.18%, #FFF 93.64%), url(${sub.imageUrl}) lightgray 50% / cover no-repeat`;
+    }
+    
     // Fokus Bisnis
     var focusBusiness = sub.focusBusiness; 
     var subFocusBisnis = sub.subFocusBisnis; 

@@ -71,10 +71,10 @@
 /* ============================== MOTTO ============================== */
 .motto {
     background: var(--primary-700);
-    height: 60dvh !important;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    padding-block: 100px;
 }
 
 .motto .blurry-circle {
@@ -246,6 +246,11 @@
 }
 
 /* ============================== RESPONSIVE ======================================================================================================================== */
+@media screen and (min-width: 1400px) {
+    .about .about-bg-img {
+        width: 25%;
+    }
+}
 
 @media screen and (max-width: 1024px) {
     body {

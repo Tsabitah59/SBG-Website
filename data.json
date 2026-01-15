@@ -4,6 +4,7 @@
             "tag": "SBK",
             "name": "SIDA BERJAYA KONSULTAN",
             "description": "Menyediakan layanan konsultasi ahli dalam fasilitasi impor dan kepabeanan, membantu klien memperlancar operasional, memastikan kepatuhan, serta meminimalkan resiko bisnis.",
+            "imageUrl" : "assets/image/sida-tower-progress.png",
             "focusBusiness": [
                 "Layanan Kepabeanan dan Distribusi",
                 "Kemitraan strategis dengan VinFast Auto, menangani impor 7.000-unit kendaraan listrik (EV).",
@@ -15,11 +16,12 @@
                 "Menyediakan strategi berbasis solusi untuk mendukung pertumbuhan bisnis yang berkelanjutan."
             ]
         },
-
+        
         {
             "tag": "SBE",
             "name": "SIDA BERJAYA ENERGI",
             "description": "Mendorong transisi menuju energi berkelanjutan melalui solusi energi terbarukan, infrastruktur pengisian kendaraan listrik, serta SIDAsafe, layanan transportasi online dengan kendaraan listrik khusus perempuan yang inovatif di Indonesia.",
+            "imageUrl" : "assets/image/sida-safe.jpg",
             "focusBusiness": [
                 "Impor & Instalasi Charger Kendaraan Listrik",
                 "Layanan Transportasi Online Khusus Perempuan (SIDAsafe.com)"
@@ -40,6 +42,7 @@
             "tag": "SJK",
             "name": "SIDA JAYA KONSTRUKSI",
             "description": "Menyediakan solusi konstruksi menyeluruh , mulai dari pengembangan lahan, layanan desain & bangun, hingga pengembangan SIDA Tower sebagai ikon gedung perkantoran dan bisnis masa depan.",
+            "imageUrl" : "assets/image/sida-tower.png",
             "focusBusiness": [
                 "Desain dan Konstruksi",
                 "Pengembangan SIDA Tower (27 lantai + 2 basement)",
