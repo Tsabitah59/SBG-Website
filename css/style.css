@@ -111,6 +111,10 @@ body{
     color: var(--text-color) !important;
 }
 
+.text-color-primary {
+    color: var(--primary-700);
+}
+
 .text-color-secondary {
     color: var(--text-secondary);
 }
