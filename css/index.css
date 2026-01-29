@@ -9,6 +9,10 @@
     box-shadow: 0 -86px 24.4px -60px var(--white) inset;
 }
 
+.hero .heading-1 span {
+    color: var(--white) !important;
+}
+
 /* ============================== ABOUT ============================== */
 .about .card-layout {
     overflow: visible;
@@ -51,7 +55,6 @@
 }
 
 .about .about-bg-img {
-    background: #000;
     position: absolute;
     top: 50%;
     transform: translateY(-50%); 
@@ -62,9 +65,11 @@
 .about .about-bg-img:first-child {
     left: 0;
     border-radius: 0 var(--big-border-radius) var(--big-border-radius) 0;
+    background: url(../assets/image/image-about.jpg) -290.417px 0px / cover no-repeat;
 }
 .about .about-bg-img:last-child {
     right: 0;
+    background: url(../assets/image/image-about.jpg) -104.986px -0.052px / cover no-repeat;
     border-radius: var(--big-border-radius) 0 0 var(--big-border-radius);
 }
 
@@ -75,18 +80,6 @@
     overflow: hidden;
     z-index: 1;
     padding-block: 100px;
-}
-
-.motto .blurry-circle {
-    top: -17px;
-    left: -360px;
-}
-
-.motto .dots-bg {
-    top: -50;
-    right: -18;
-    z-index: -1;
-
 }
 
 /* ============================== KEUNGGULAN ============================== */
@@ -270,7 +263,7 @@
 @media screen and (max-width: 991.5px) {
     /* ============================== ABOUT ============================== */
     .about {
-        background: linear-gradient(180deg, #FFF 4.73%, rgba(255, 255, 255, 0.80) 100%), url(../assets/image/bg-hero-img.png) /* Ganti Imagenya JANGAN LUPA */ lightgray -251.919px 1.992px / 291.415% 134.467% no-repeat;
+        background: linear-gradient(180deg, #FFF 4.73%, rgba(255, 255, 255, 0.80) 100%), url(../assets/image/image-about.jpg) lightgray -251.919px 1.992px / cover no-repeat;
         background-size: cover;
         background-position: right;
     }

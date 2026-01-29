@@ -11,7 +11,9 @@
 
     <!-- local -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/property.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bg-decoration.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/logo/favicon-logo.svg" type="image/x-icon">
@@ -43,7 +45,6 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body overflow-hidden d-flex flex-md-row flex-column align-items-center flex-md-grow-0 flex-grow-1 pe-3">
-                    <!--  -->
                     <ul class="navbar-nav mx-md-auto mx-0 my-auto">
                         <li class="nav-item">
                             <a class="nav-link body-p mx-auto" href="#header">Beranda</a>
@@ -207,8 +208,9 @@
         <h3 class="heading-3 text-color-secondary d-inline-block"> Konsultan • SIDA Berjaya Konsultan • Energi • SIDA Berjaya Energi • Konstruksi • SIDA Jaya Konstruksi •&nbsp;</h3>
     </section>
 
+    <!-- NOTE: ANIMASIIN DIKIT DAN LOGIC BUTTONNYA -->
     <!-- ============================== GRUP BISNIS ============================== -->
-    <section id="grup-bisnis" class="grup-bisnis section-height">
+    <section id="grup-bisnis" class="grup-bisnis section-height position-relative overflow-hidden">
         <div class="container-md">
             <!-- Judul Grup Bisnis -->
             <div class="row text-center justify-content-center">
@@ -238,7 +240,7 @@
                         </section>
 
                         <!-- Isi dari penjelasan bisnis -->
-                        <section class="penjelasan-grup-bisnis p-sm-3 p-2 thin-white">
+                        <section class="penjelasan-grup-bisnis p-sm-3 p-2 bg-white">
                             <div class="row mt-4">
                                 <div class="col-md-6 col-12 pe-md-3 p-0">
                                     <div class="subjudul-penjelasan-grup-bisnis">
@@ -264,10 +266,11 @@
                 </div>
             </div>
         </div>
+        <img src="assets/property/ellipse.svg" class="ellipse position-absolute">
     </section>
 
     <!-- ============================== PORTFOLIO ============================== -->
-    <section id="portfolio" class="portfolio section-height d-flex align-items-center">
+    <section id="portfolio" class="portfolio section-height d-flex align-items-center position-relative overflow-hidden">
         <div class="container-md">
             <!-- Judul -->
             <div class="row align-items-center justify-content-between">
@@ -276,24 +279,6 @@
                     <span class="body-p text-color-secondary">PORTFOLIO</span>
                     <h2 class="heading-2 mb-4"><span class="text-span">pencapaian</span><br>terbesar kami</h2>
                 </div>
-
-                <!-- Data dalam bentuk angka -->
-                <!-- <div class="col-lg-5 col-md-6 col-12">
-                    <div class="count-on-porto text-center d-flex justify-content-evenly">
-                        <div class="data-count-on-porto p-3">
-                            <h2 class="heading-2 m-0 text-color-primary">200</h2>
-                            <p class="body-p text-color-secondary m-0">lorem ipsum</p>
-                        </div>
-                        <div class="data-count-on-porto p-3">
-                            <h2 class="heading-2 m-0 text-color-primary">200</h2>
-                            <p class="body-p text-color-secondary m-0">lorem ipsum</p>
-                        </div>
-                        <div class="data-count-on-porto p-3">
-                            <h2 class="heading-2 m-0 text-color-primary">200</h2>
-                            <p class="body-p text-color-secondary m-0">lorem ipsum</p>
-                        </div>
-                    </div>
-                </div> -->
             </div>
 
             <!-- Isi -->
@@ -352,13 +337,15 @@
                         </div>
                     </div>
                 </div>
-
             </section>
         </div>
+        <div class="blurry-circle"></div>
+        <img src="assets/property/dots.svg" class="dots-bg-thin">
     </section>
- 
+
+    <!-- NOTE: COPYWRITING JANGAN LUPA -->
     <!-- ============================== FAQ ============================== -->
-    <section class="faq section-height d-flex align-items-center">
+    <section class="faq section-height d-flex align-items-center position-relative overflow-hidden">
         <div class="container-md"> 
             <!-- Judul FAQ -->
             <div class="row">
@@ -375,7 +362,7 @@
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item card-layout mb-3">
                             <h6 class="accordion-header">
-                                <button class="accordion-button p-0 bg-white shadow-none text-color heading-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="accordion-button p-0 bg-transparent shadow-none text-color heading-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     Accordion Item #1
                                 </button>
                             </h6>
@@ -387,7 +374,7 @@
                         </div>
                         <div class="accordion-item card-layout mb-3">
                             <h6 class="accordion-header">
-                                <button class="accordion-button p-0 collapsed bg-white shadow-none text-color heading-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <button class="accordion-button p-0 collapsed bg-transparent shadow-none text-color heading-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     Accordion Item #2
                                 </button>
                             </h6>
@@ -399,7 +386,7 @@
                         </div>
                         <div class="accordion-item card-layout mb-3">
                             <h6 class="accordion-header">
-                                <button class="accordion-button p-0 collapsed bg-white shadow-none text-color heading-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <button class="accordion-button p-0 collapsed bg-transparent shadow-none text-color heading-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     Accordion Item #3
                                 </button>
                             </h6>
@@ -411,7 +398,7 @@
                         </div>
                         <div class="accordion-item card-layout mb-3">
                             <h6 class="accordion-header">
-                                <button class="accordion-button p-0 collapsed bg-white shadow-none text-color heading-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <button class="accordion-button p-0 collapsed bg-transparent shadow-none text-color heading-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     Accordion Item #4
                                 </button>
                             </h6>
@@ -435,6 +422,10 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Aksesoris Aja Inimah -->
+        <div class="blurry-circle"></div>
+        <img src="assets/property/dots.svg" class="dots-bg-thin">
     </section>
     
     <!-- ============================== FOOTER ============================== -->
@@ -476,14 +467,19 @@
             <hr class="text-white">
             <p class="body-p text-center text-white">&copy; SIDA Berjaya Group</p>
         </div>
+        
         <!-- Aksesoris Aja Inimah -->
         <div class="blurry-circle"></div>
         <img src="assets/property/dots.svg" class="dots-bg">
+        <img src="assets/property/dots.svg" class="dots-bg">
     </footer>
-
+    
     <!-- ============================== JAVASCRIPT ============================== -->
     <!-- Bootstrap -->
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Animation -->
+    <script type="module" src="js/animatemy.js"></script>
 
     <!-- Local -->
     <script src="js/script.js"></script>

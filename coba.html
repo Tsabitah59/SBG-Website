@@ -1,96 +1,32 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sub Bisnis SIDA</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .sub-business { border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; }
-        h2 { color: #333; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin-bottom: 5px; }
-        button { margin: 5px; padding: 10px; cursor: pointer; }
-        #nav-buttons { text-align: center; margin-bottom: 20px; }
-        .active { background-color: #4CAF50; color: white; } /* Styling untuk tombol aktif */
-    </style>
+  <meta charset="utf-8">
+  <title>Contoh Anime.js CDN</title>
 </head>
 <body>
-    <h1>Daftar Sub Bisnis SIDA</h1>
-    <div id="nav-buttons"></div> <!-- Tombol akan dibuat dinamis di sini -->
-    <div id="content"></div>
+    <div class="large centered row">
+        <p id="text" class="text-xl">Split text by words.<br>単語ごとに分割します。</p>
+      </div>
+      <div class="small row"></div>
 
-    <script>
-        let currentIndex = 0; // Mulai dari sub-bisnis pertama (index 0)
-        let data; // Untuk menyimpan data JSON
-        let buttons = []; // Array untuk menyimpan referensi tombol
+    </script>
+    <script type="module">
+import { animate, splitText, stagger } from 'https://esm.sh/animejs';
 
-        // Fungsi untuk memuat JSON lokal
-        async function loadData() {
-            try {
-                const response = await fetch('data.json');
-                if (!response.ok) {
-                    throw new Error('Gagal memuat file JSON');
-                }
-                data = await response.json();
-                createButtons(); // Buat tombol untuk setiap sub-bisnis
-                renderSubBusiness(currentIndex); // Render yang pertama dulu
-            } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('content').innerHTML = '<p>Gagal memuat data. Pastikan file JSON ada dan server lokal berjalan.</p>';
-            }
-        }
+const { words } = splitText('#text', {
+  words: { wrap: 'clip' },
+})
 
-        // Fungsi untuk membuat tombol dinamis
-        function createButtons() {
-            const navButtons = document.getElementById('nav-buttons');
-            data.subBusinesses.forEach((sub, index) => {
-                const button = document.createElement('button');
-                button.textContent = sub.name; // Nama sub-bisnis sebagai teks tombol
-                button.addEventListener('click', () => {
-                    currentIndex = index; // Set index berdasarkan tombol yang diklik
-                    renderSubBusiness(currentIndex);
-                    updateActiveButton(index); // Update styling tombol aktif
-                });
-                navButtons.appendChild(button);
-                buttons.push(button); // Simpan referensi tombol
-            });
-        }
-
-        // Fungsi untuk render sub-bisnis berdasarkan index
-        function renderSubBusiness(index) {
-            const content = document.getElementById('content');
-            const sub = data.subBusinesses[index];
-            
-            content.innerHTML = `
-                <div class="sub-business">
-                    <h2>${sub.name}</h2>
-                    <p><strong>Deskripsi:</strong> ${sub.description}</p>
-                    <p><strong>Fokus Bisnis:</strong></p>
-                    <ul>
-                        ${sub.focusBusiness.map(item => `<li>${item.replace(/\n/g, '<br>')}</li>`).join('')}
-                    </ul>
-                    <p><strong>Keunggulan Utama:</strong></p>
-                    <ul>
-                        ${sub.keyAdvantages.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                </div>
-            `;
-        }
-
-        // Fungsi untuk update styling tombol aktif
-        function updateActiveButton(activeIndex) {
-            buttons.forEach((btn, index) => {
-                if (index === activeIndex) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-        }
-
-        // Panggil fungsi saat halaman dimuat
-        window.onload = loadData;
+animate(words, {
+  y: [
+    { to: ['100%', '0%'] },
+  ],
+  duration: 750,
+  ease: 'out(3)',
+  delay: stagger(100),
+  loop: true,
+});
     </script>
 </body>
 </html>

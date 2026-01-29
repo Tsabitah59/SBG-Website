@@ -1,0 +1,51 @@
+/* ============================== MOTTO ============================== */
+.motto .blurry-circle {
+    top: -17px;
+    left: -360px;
+}
+
+.motto .dots-bg {
+    right: -40px;
+    z-index: -1;
+}
+
+/* ============================== GRUP BISNIS ============================== */
+.grup-bisnis .ellipse{
+    width: 100%;
+    top: 500px;
+    z-index: -1;
+}
+
+/* ============================== PORTFOLIO ============================== */
+.portfolio .blurry-circle {
+    right: -250px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.portfolio .dots-bg-thin {
+    left: -30px;
+}
+
+/* ============================== FAQ ============================== */
+.faq .dots-bg-thin{
+    bottom: -80px;
+    right: -30px;
+}
+
+.faq .blurry-circle {
+    left: -250px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ============================== FOOTER ============================== */
+.footer .blurry-circle {
+    top: 100px;
+    right: -100px;
+}
+
+.footer .dots-bg:last-child {
+    right: -30px;
+    top: -35px;
+}

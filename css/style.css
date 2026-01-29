@@ -111,6 +111,10 @@ body{
     color: var(--text-color) !important;
 }
 
+.text-color-white {
+    color: var(--white) !important;
+}
+
 .text-color-primary {
     color: var(--primary-700);
 }
@@ -124,16 +128,23 @@ body{
     width: 584px;
     height: 584px;
     top: 0;
-    background: var(--primary-50);
+    background: var(--primary-600);
     opacity: .2;
     border-radius: 999px;
-    filter: blur(190px);
+    /* filter: blur(100px); */
     position: absolute;
     z-index: -1;
 }
 
 .dots-bg {
     position: absolute;
+    z-index: -1;
+}
+
+.dots-bg-thin {
+    position: absolute;
+    opacity: 14%;
+    z-index: -1;
 }
 
 .thin-white{
@@ -141,282 +152,3 @@ body{
     background-blend-mode: overlay;
     backdrop-filter: blur(8.25px);
 }
-
-/* ============================== NAVBAR ============================== */
-nav {
-    z-index: 1000000000000;
-}
-
-nav .logo-sida {
-    width: 70px;
-}
-
-.nav-color {
-    background: var(--thin-white-2);
-    background-blend-mode: overlay;
-    transition: var(--default-duration);
-}
-
-.navbar-backdrop.active {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    backdrop-filter: blur(8.25px);
-    inset: 0;
-}
-
-nav .navbar-toggler{
-    border: none !important;
-    background: none !important;
-    padding: 0 !important;
-    color: transparent !important;
-}
-
-.navbar-toggler i {
-    color: var(--white);
-}
-
-.nav-color .navbar-toggler i {
-    color: var(--primary-700);
-}
-
-nav .navbar-toggler-icon {
-    background-image: none !important;
-    display: grid;
-    place-items: center;
-}
-
-nav .offcanvas .offcanvas-title img {
-    width: 80%;
-}
-
-.nav-link.body-p {
-    width: max-content;
-    color: var(--white);
-}
-
-.nav-color .nav-link.body-p {
-    color: var(--text-secondary);
-}
-
-.nav-color .nav-link.body-p:hover {
-    color: var(--text-color);
-}
-
-.nav-link.body-p::after {
-    content: "";
-    display: block;
-    width: 0%;
-    height: 2px;
-    background-color: var(--primary-700);
-    transition: var(--default-duration);
-}
-
-.nav-link.body-p.active::after, .nav-link.body-p:hover::after {
-    width: 100%;
-}
-
-/* ============================== TAG ============================== */
-.primary-tag {
-    padding: 6px 10px;
-    border-radius: 6px;
-    background: var(--primary-700);
-    color: var(--white); 
-    font-size: 12px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.primary-tag-white {
-    width: max-content;
-    padding: 6px 10px;
-    border-radius: 6px;
-    background: var(--white);
-    color: var(--primary-700);
-    font-size: 12px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.primary-tag-big {
-    display: block;
-    width: 38px;
-    height: 38px;
-    border-radius: 6px;
-    padding: 4px;
-    background: var(--primary-700);
-    font-size: 20px;
-    text-align: center;
-    font-weight: 400;
-    color: var(--white);
-}
-/* ============================== BUTTON ============================== */
-.button-primary-medium {
-    text-decoration: none;
-    padding: 10px 24px;
-    background: var(--primary-700);
-    color: var(--white);
-    border-radius: var(--small-border-radius);
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: all var(--default-duration);
-    box-shadow: var(--default-shadow);
-    overflow: hidden;
-}
-
-.button-primary-medium::before {
-    content: " ";
-    display: grid;
-    place-items: center;
-    background: var(--primary-500);
-    position: absolute;
-    bottom: 0;
-    border-radius: 0 10px 10px 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: all var(--default-duration);
-}
-
-.button-primary-medium:hover {
-    scale: 1.02;
-}
-
-.button-primary-medium:hover::before {
-    left: 0%;
-}
-
-/* ============================== CARD ============================== */
-.card-layout {
-    border-radius: var(--default-border-radius) !important;
-    border: 1px solid var(--neutral-color) !important;
-    align-items: center;
-    outline: 1px solid transparent;
-    padding: 16px;
-    gap: 16px;
-    background: var(--thin-white);
-    overflow: hidden;
-    background-blend-mode: overlay;
-    backdrop-filter: blur(8.25px);
-    transition: var(--default-duration);
-}
-.card-layout:hover {
-    border: 1px solid var(--primary-100) !important;
-    outline-offset: 3px;
-    outline: 1px solid var(--primary-700);
-    scale: 1.02;
-}
-
-.card-layout.dont-hover:hover {
-    scale: 1;
-    border: 1px solid var(--neutral-color) !important;
-    outline: 1px solid transparent;
-}
-
-/* ============================== FOOTER ============================== */
-.footer {
-    background: var(--primary-700);
-    border-radius: 20px 20px 0 0;
-    padding-block: 70px;
-}
-
-.footer .logo-sida {
-    height: 50px;
-} 
-
-.footer .sosmed-group {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-}
-
-.footer .sosmed-icon {
-    text-decoration: none;
-    border-radius: var(--small-border-radius);
-    width: 44px;
-    height: 44px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--primary-600);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.footer .sosmed-icon i{
-    color: var(--white);
-    position: relative;
-    font-size: 20px;
-    height: 24px;
-    text-align: center;
-
-}
-
-.footer .contact-group .contact-list {
-    gap: 3px;
-    list-style: none;
-    display: flex;
-    align-items: start;
-}
-
-.footer .contact-group .contact-list i {
-    font-size: 16px;
-    margin-right: 4px;
-    color: var(--white);
-}
-
-.footer .contact-group .contact-list span {
-    font-size: 14px;
-}
-
-.footer .blurry-circle {
-    top: 100px;
-    right: -100px;
-}
- 
-/* ============================== RESPONSIVE ======================================================================================================================== */
-@media screen and (max-width: 1024px) {
-    body {
-        font-size: 70%;
-    }
-}
-
-@media screen and (max-width: 991px) {
-}
-
-@media screen and (max-width: 768px) {
-    /* ============================== NAVBAR ============================== */
-    nav .offcanvas .button-primary-medium {
-        width: max-content;
-    }
-
-    nav .offcanvas {
-        width: 30% !important;
-    }
-    
-    nav .offcanvas ul {
-        padding: 2px;
-    }
-    
-    .nav-link.body-p {
-        color: var(--text-secondary);
-    }
-
-    .nav-link.body-p:hover {
-        color: var(--text-color);
-    }
-}
-
-@media screen and (max-width: 576px) {
-    /* ============================== NAVBAR ============================== */
-    nav .offcanvas {
-        width: 50% !important;
-    }
-}
- 
