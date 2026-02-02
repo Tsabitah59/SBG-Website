@@ -1,3 +1,10 @@
+/* ============================== ABOUT ============================== */
+.about .blurry-circle {
+    left: 50%;
+    bottom: -300px !important;
+    transform: translate(-50%);
+}
+
 /* ============================== MOTTO ============================== */
 .motto .blurry-circle {
     top: -17px;
@@ -7,6 +14,15 @@
 .motto .dots-bg {
     right: -40px;
     z-index: -1;
+}
+
+/* ============================== KEUNGGULAN ============================== */
+.keunggulan .blurry-circle{
+    right: -300px;
+}
+
+.keunggulan .dots-bg-thin {
+    left: -20px;
 }
 
 /* ============================== GRUP BISNIS ============================== */

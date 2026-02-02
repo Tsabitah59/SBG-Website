@@ -127,11 +127,10 @@ body{
 .blurry-circle {
     width: 584px;
     height: 584px;
-    top: 0;
-    background: var(--primary-600);
+    background: var(--primary-50);
     opacity: .2;
     border-radius: 999px;
-    /* filter: blur(100px); */
+    filter: blur(80px);
     position: absolute;
     z-index: -1;
 }
