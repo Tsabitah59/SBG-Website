@@ -159,7 +159,7 @@ nav .offcanvas .offcanvas-title img {
     overflow: hidden;
     background-blend-mode: overlay;
     backdrop-filter: blur(8.25px);
-    transition: var(--default-duration);
+    transition: var(--default-duration); 
 }
 .card-layout:hover {
     border: 1px solid var(--primary-100) !important;

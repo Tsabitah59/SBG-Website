@@ -7,6 +7,7 @@
     height: 110svh;
     width: 100%;
     box-shadow: 0 -86px 24.4px -60px var(--white) inset;
+    background-attachment: fixed;
 }
 
 .hero .heading-1 span {
@@ -138,8 +139,18 @@
     white-space: nowrap;
 }
 
+.grup-bisnis .switch-button-grup-bisnis .card-layout:active {
+    background: var(--primary-50);
+    border: 1px solid var(--primary-100) !important;
+    outline-offset: 3px;
+    outline: 1px solid var(--primary-700);
+}
+
 .grup-bisnis .switch-button-grup-bisnis .card-layout.active {
-    background: var(--primary-100);
+    background: var(--primary-50);
+    border: 1px solid var(--primary-100) !important;
+    outline-offset: 3px;
+    outline: 1px solid var(--primary-700);
 }
 
 .grup-bisnis .switch-button-grup-bisnis .card-layout.active:hover {
@@ -151,12 +162,23 @@
 
 .grup-bisnis .isi-grup-bisnis {
     box-shadow: var(--box-shadow);
-    border-radius: var(--big-border-radius);
+    border-radius: var(--big-border-radius) !important;
 }
 
 .grup-bisnis .judul-section-grup-bisnis {
-    height: 80dvh;
+    height: 500px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 59.18%, #FFF 93.64%), url(../assets/image/contoh-img.jpg) lightgray 50% / cover no-repeat;
+    border-radius: var(--big-border-radius) !important;
+    transition: filter 0.3s ease-in-out;
+}
+
+.grup-bisnis .judul-section-grup-bisnis.blur-effect {
+    filter: blur(15px);
+    opacity: 0.8; 
+}
+
+.grup-bisnis .penjelasan-grup-bisnis {
+    border-radius: var(--big-border-radius) !important
 }
 
 .grup-bisnis .penjelasan-grup-bisnis .row {
@@ -453,4 +475,11 @@
         width: 100%;
     }
 }
+
+.fade-in-scale-apply {
+    animation: fadeInScale ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
  

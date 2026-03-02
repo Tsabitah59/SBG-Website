@@ -1,3 +1,26 @@
+/* ============================== GENERAL DECORATION ============================== */
+.blurry-circle {
+    width: 584px;
+    height: 584px;
+    background: var(--primary-50);
+    opacity: .2;
+    border-radius: 999px;
+    filter: blur(80px);
+    position: absolute;
+    z-index: -1;
+}
+
+.dots-bg {
+    position: absolute;
+    z-index: -1;
+}
+
+.dots-bg-thin {
+    position: absolute;
+    opacity: 14%;
+    z-index: -1;
+}
+
 /* ============================== ABOUT ============================== */
 .about .blurry-circle {
     left: 50%;

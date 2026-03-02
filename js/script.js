@@ -3,6 +3,9 @@ const navbar = document.getElementsByTagName('nav')[0];
 const logo = document.getElementById('logo-sida');
 const backdrop = document.querySelector('.navbar-backdrop');
 
+let header = document.getElementById("header");
+let titleText = document.getElementById("title-text");
+
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY > 1;
 
@@ -12,7 +15,15 @@ window.addEventListener('scroll', () => {
     backdrop.classList.toggle('active', scrolled);
 
     logo.src = scrolled ? 'assets/logo/logo-color.svg' : 'assets/logo/logo-white.svg';
+    
+    
+    var value = window.scrollY;
+    
+    // titleText.style.scale = (value + 1) * 0.5 
 });
+
+// ============================== HERO ==============================
+
 
 // ============================== GRUP BISNIS ==============================
 let currentIndex = 0; // Sub bisnis pertama
@@ -56,6 +67,8 @@ function createButtons() {
         button.appendChild(h6);
         
         button.addEventListener('click', () => {
+            if (currentIndex === index) return;
+            
             currentIndex = index;
             renderSubBusiness(currentIndex);
             updateActiveButton(index);
@@ -80,6 +93,7 @@ function renderSubBusiness(index) {
     
     // Update background image berdasarkan imageUrl dari JSON
     const judulSectionGrupBisnis = document.querySelector('.judul-section-grup-bisnis');
+    judulSectionGrupBisnis.classList.add('blur-active');
     if (sub.imageUrl) {
         judulSectionGrupBisnis.style.background = `linear-gradient(180deg, rgba(255, 255, 255, 0.00) 59.18%, #FFF 93.64%), url(${sub.imageUrl}) lightgray 50% / cover no-repeat`;
     }
@@ -130,24 +144,30 @@ function renderSubBusiness(index) {
     var wrapListKeunggulanGrupBisnis = document.getElementById('keunggulan-grup-bisnis');
     wrapListKeunggulanGrupBisnis.innerHTML = '';
 
+    wrapListKeunggulanGrupBisnis.classList.add('fade-out');
+
+
     // Loop melalui array keyAdvantages
-    keyAdvantages.forEach((item, index) => {
-        const listForGrupBisnisData = document.createElement('li');
-        listForGrupBisnisData.className = 'd-flex gap-2 align-items-center mb-3';
-            
-        const tagKeunggulanGrupBisnis = document.createElement('span');
-        tagKeunggulanGrupBisnis.className = 'primary-tag';
-        tagKeunggulanGrupBisnis.textContent = index + 1; 
-            
-        const dataPenjelasanKeunggulanGrupBisnis = document.createElement('h6');
-        dataPenjelasanKeunggulanGrupBisnis.className = 'heading-6 mb-0';
-        dataPenjelasanKeunggulanGrupBisnis.textContent = item;
-            
-        listForGrupBisnisData.appendChild(tagKeunggulanGrupBisnis);
-        listForGrupBisnisData.appendChild(dataPenjelasanKeunggulanGrupBisnis);
-            
-        wrapListKeunggulanGrupBisnis.appendChild(listForGrupBisnisData);
-    });
+    setTimeout(() => {
+        keyAdvantages.forEach((item, index) => {
+            const listForGrupBisnisData = document.createElement('li');
+            listForGrupBisnisData.className = 'd-flex gap-2 align-items-center mb-3';
+                
+            const tagKeunggulanGrupBisnis = document.createElement('span');
+            tagKeunggulanGrupBisnis.className = 'primary-tag';
+            tagKeunggulanGrupBisnis.textContent = index + 1; 
+                
+            const dataPenjelasanKeunggulanGrupBisnis = document.createElement('h6');
+            dataPenjelasanKeunggulanGrupBisnis.className = 'heading-6 mb-0';
+            dataPenjelasanKeunggulanGrupBisnis.textContent = item;
+                
+            listForGrupBisnisData.appendChild(tagKeunggulanGrupBisnis);
+            listForGrupBisnisData.appendChild(dataPenjelasanKeunggulanGrupBisnis);
+                
+            wrapListKeunggulanGrupBisnis.appendChild(listForGrupBisnisData);
+        });
+        wrapListKeunggulanGrupBisnis.classList.remove('fade-out');
+    }, 300);
 }
 
 // Style Update Button
