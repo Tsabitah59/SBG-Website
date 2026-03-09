@@ -16,6 +16,3 @@ setAosAnimation();
 
 // Jalankan saat ukuran layar berubah
 window.addEventListener('resize', setAosAnimation);
-
-// Inisialisasi AOS
-AOS.init();

@@ -8,21 +8,22 @@ let titleText = document.getElementById("title-text");
 
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY > 1;
-
+    
     navbar.classList.toggle('nav-color', scrolled);
     navbar.classList.toggle('bg-transparent', !scrolled);
-
+    
     backdrop.classList.toggle('active', scrolled);
-
+    
     logo.src = scrolled ? 'assets/logo/logo-color.svg' : 'assets/logo/logo-white.svg';
     
+// ============================== HERO ==============================
+//     var value = window.scrollY;
+
+//     console.log(value + 1);
     
-    var value = window.scrollY;
-    
-    // titleText.style.scale = (value + 1) * 0.5 
+//     titleText.style.scale = (value + 1) * 0.5 
 });
 
-// ============================== HERO ==============================
 
 
 // ============================== GRUP BISNIS ==============================
