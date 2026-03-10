@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+/* ============================== PORTFOLIO ============================== */
+.portfolio {
+    background: var(--primary-50);
+}
+.portfolio .isi-portfolio .col-12 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio .isi-portfolio .portfolio-card {
+    flex: 1 0 200px;
+    background: var(--primary-50);
+    height: 400px;
+    border-radius: var(--default-border-radius);
+    background: url(../assets/image/sida-tower.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: var(--default-duration);
+}
+
+.portfolio .isi-portfolio .portfolio-card:hover {
+    transform: scale(1.02);
+}
+
+.portfolio .isi-portfolio .portfolio-card:hover  .portfolio-card-desc {
+    bottom: 0;
+    left: 0;
+}
+
+.portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    bottom: -84px;
+    background: radial-gradient(109.54% 73.32% at 7.26% 84.9%, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+    color: var(--white);
+    transition: var(--default-duration);
+}
+
+/*  */
+
+    /* ============================== PORTFOLIO ============================== */
+    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -50px;
+    }
+
+    
+    /* ============================== PORTFOLIO ============================== */
+    .portfolio .isi-portfolio .portfolio-card {
+        height: 300px;
+        flex: 1 0 200px
+    }
+    
+    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -65px;
+    }
+
+    @media screen and (max-width: 692px) {
+    /* ============================== PORTFOLIO ============================== */
+    /* .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -86px;
+    }
+    
+    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
+        bottom: -86px;
+    } */
+}
+
+@media screen and (max-width: 655.5px) {
+    /* ============================== PORTFOLIO ============================== */
+    /* .portfolio .isi-portfolio .portfolio-card:last-child {
+        height: 200px;
+    }
+        
+    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -50px;
+    }
+    
+    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
+        bottom: -50px;
+        width: 50%;
+    } */
+}
+
+@media screen and (max-width: 611px) {
+    /* ============================== PORTFOLIO ============================== */
+    /* .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -66px;
+    } */
+}
+
+@media screen and (max-width: 594px) {
+    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
+        bottom: -70px;
+    }
+}
+
+
+@media screen and (max-width: 463.5px) {
+    /* ============================== PORTFOLIO ============================== */
+    /* .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
+        bottom: -80px;
+    } */
+}
+
+@media screen and (max-width: 447.5px) {
+    /* ============================== PORTFOLIO ============================== */
+    /* .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
+        bottom: -80px;
+    } */
+}
+
+@media screen and (max-width: 378px) {
+    /* ============================== GRUP BISNIS ============================== */
+    .grup-bisnis .heading-2 {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    /* .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc, .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc  {
+        bottom: -50px;
+        width: 100%;
+    } */
+}
+
+
+@media screen and (max-width: 439.5px) {
+    /* ============================== PORTFOLIO ============================== */
+    /* .portfolio .isi-portfolio .portfolio-card {
+        height: 200px;
+    }
+
+    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc, .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc  {
+        bottom: -70px;
+        width: 65%;
+    } */
+}
+</style>
+
+<body>
+    <!-- ============================== PORTFOLIO ============================== -->
+    <section id="portfolio" class="portfolio section-height d-flex align-items-center position-relative overflow-hidden">
+        <div class="container-md">
+            <!-- Judul -->
+            <div class="row align-items-center justify-content-between">
+                <!-- Teks buat Judul -->
+                <div class="col-lg-7 col-md-6 col-12">
+                    <span class="body-p text-color-secondary">PORTFOLIO</span>
+                    <h2 class="heading-2 mb-4"><span class="text-span">pencapaian</span><br>terbesar kami</h2>
+                </div>
+            </div>
+
+            <!-- Isi -->
+            <section class="row gap-lg-0 isi-portfolio">
+                <div class="col-12 justify-content-between gap-3">
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-desc p-3">
+                            <span class="primary-tag-white mb-2">SIDA BERJAYA ENERGI</span>
+                            <h4 class="heading-4">SIDAsafe</h4>
+                            <p class="mb-0 text-white">layanan transportasi online dengan kendaraan listrik khusus perempuan yang inovatif di Indonesia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-desc p-3">
+                            <span class="primary-tag-white mb-2">SIDA BERJAYA ENERGI</span>
+                            <h4 class="heading-4">SIDAsafe</h4>
+                            <p class="mb-0 text-white">layanan transportasi online dengan kendaraan listrik khusus perempuan yang inovatif di Indonesia</p>
+                        </div>
+                    </div>
+    
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-desc p-3">
+                            <span class="primary-tag-white mb-2">SIDA BERJAYA ENERGI</span>
+                            <h4 class="heading-4">SIDAsafe</h4>
+                            <p class="mb-0 text-white">layanan transportasi online dengan kendaraan listrik khusus perempuan yang inovatif di Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="blurry-circle"></div>
+        <img src="assets/property/dots.svg" class="dots-bg-thin">
+    </section>
+</body>
+</html>

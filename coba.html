@@ -1,343 +1,59 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root {
-  --font-size-h-sm: 1.3rem;
-  --card-width: calc( var(--font-size-h-sm) * 10 );
-  --gap-x: 12px;
-  --gap-y: 18px;
-  --step: 1;
-}
-
-html, body {
-  font-family: 'Poppins', sans-serif;
+* {
   margin: 0;
   padding: 0;
 }
 
-body {
-  height: 100%;
-  background: #000000c4;
-}
-
-.stack-cards-container {
-  position: relative;
-  height: 930vh;
-}
-@media(max-width: 576px) {
-  .stack-cards-container {
-    position: relative;
-    height: 700vh;
-  }
-}
-
-.stack-cards {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 0; 
-  width: 100%;
-}
-
-.stack-cards__item {
-  height: 250px;
-  padding: 20px;
-  background: #0B4550;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.32);
-  position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%;
-  width: 350px;
-  border: 1px solid black;
-  border-radius: 1.5rem;
-  transform: translate(-50%, -50%);
-  transition: transform 1.3s cubic-bezier(0.9, -0.2, 0.1, 1.2), 
-              opacity 1.3s cubic-bezier(1, 0, 0, 1) 0s;
-  will-change: opacity, transform;
-  color: white;
-}
-
-.inner {
-  position: relative;
-  z-index: 2;
-  padding: calc(var(--card-width) * .1);
-  width: 100%;
-  height: 100%;
-  background-color: #0B4550;
-  border: 1px solid black;
-  border-radius: 1.5rem;
-}
-
-.stack-cards__item h3 {
-  color: white;
-  font-weight: 500;
-  margin-top: 0;
-}
-
-.stack-cards__item p {
-  font-weight: 300;
-}
-
-.stack-cards__item .counter {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    color: #4cede1;
-    font-size: 12px;
-    letter-spacing: .1em;
-    text-align: center;
-}
-
-.shadow {
-    position: absolute;
-    top: .5rem;
-    left: .5rem;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background-color: #08333c;
-    border: 1px solid #252525;
-    border-radius: 1.5rem;
-}
-
-.stack-cards__item.slide-up {
-  transform: translate(-50%, -260%); /* Move up out of view */
-}
-
-.flex {
-  display: flex;
-  font-size: 1.5rem;
-}
-
-.flex-center {
-  justify-content: center;
-  align-items: center;
-}
-
-
-</style>
-<body>
-<div style="height:50vh;"></div>
-<div class="stack-cards-container">
-   <div class="stack-cards">
-      <div class="stack-cards__item">
-         <div class="inner">
-            <h3>Knight Forks:</h3>
-            <p>Knights are unique in their movement pattern, capable of hopping over other pieces in a way that bishops and rooks cannot. This ability makes them particularly effective at executing fork tactics, where a single knight simultaneously attacks two or more enemy pieces.</p>
-            <div class="counter">6/6</div>
-         </div>
-         <div class="shadow"></div>
-      </div>
-      <div class="stack-cards__item">
-         <div class="inner">
-            <h3>Zwischenzug (Intermezzo):</h3>
-            <p>It refers to unexpected intermediate moves that disrupt the natural flow of a position. These surprising intermezzos can change the evaluation of a position dramatically, catching opponents off guard and forcing them to recalculate their plans on the spot.</p>
-            <div class="counter">5/6</div>
-         </div>
-         <div class="shadow"></div>
-      </div>
-      <div class="stack-cards__item">
-         <div class="inner">
-            <h3>Pinning and Unpinning:</h3>
-            <p>Pins occur when a piece is immobilized due to the threat of a more valuable piece behind it. Mastering the art of pinning and unpinning involves using pieces like bishops and rooks to restrict the movement of enemy pieces, potentially winning material or creating tactical opportunities.</p>
-            <div class="counter">4/6</div>
-         </div>
-         <div class="shadow"></div>
-      </div>
-      <div class="stack-cards__item">
-         <div class="inner">
-            <h3>Pawn Structures and Pawn Chains:</h3>
-            <p>Pawn structures play a crucial role in determining the strategic nature of a position. Pawn chains, where pawns support each other in a diagonal line, can control key squares and restrict the opponent's pieces.</p>
-            <div class="counter">3/6</div>
-         </div>
-         <div class="shadow"></div>
-      </div>
-      <div class="stack-cards__item">
-         <div class="inner">
-            <h3>Underpromotion:</h3>
-            <p> It occurs when a pawn reaches the eighth rank and is promoted to a piece other than a queen, typically a knight, bishop, or rook.</p>
-            <div class="counter">2/6</div>
-         </div>
-         <div class="shadow"></div>
-      </div>
-
-      <div class="stack-cards__item">
-         <div class="inner">
-            <h3>Overloading:</h3>
-            <p>Overloading refers to the tactic of placing excessive pressure on a defending piece, forcing it to perform multiple defensive tasks simultaneously. By overwhelming a single piece with multiple threats, players can create opportunities to exploit weaknesses elsewhere on the board.</p>
-            <div class="counter">1/6</div>
-         </div>
-         <div class="shadow"></div>
-      </div>
-   </div>
-</div>
-<div style="height:30vh;"></div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-  let lastScrollTop = 0;
-
-  document.addEventListener('scroll', () => {
-    const container = document.querySelector('.stack-cards-container');
-    const cards = document.querySelectorAll('.stack-cards__item');
-    const containerRect = container.getBoundingClientRect();
-    const windowHeight = window.innerHeight + 300;
-    const scrollPosition = window.scrollY;
-    const scrollDown = scrollPosition > lastScrollTop;
-    lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
-
-    const progress = Math.max(0, (scrollPosition - containerRect.top + windowHeight) / (windowHeight * 2));
-
-    // Apply transformations in reverse order
-    const numCards = cards.length;
-    for (let index = numCards - 1; index >= 0; index--) {
-      const card = cards[index];
-      if (index === numCards - 1) { // Apply to the last card only so it scrolls faster
-        if (scrollPosition > containerRect.top - windowHeight * 0.2) {
-          card.classList.add('slide-up');
-        } else {
-          card.classList.remove('slide-up');
-        }
-      } else {
-        if (scrollDown) {
-          if (index >= numCards - progress && index !== numCards - 1) { // Exclude the last card
-            card.classList.add('slide-up');
-          } else {
-            card.classList.remove('slide-up');
-          }
-        } else {
-          if (index > numCards - progress - 1 && index !== numCards - 1) { // Exclude the last card
-            card.classList.add('slide-up');
-          } else {
-            card.classList.remove('slide-up');
-          }
-        }
-      }
-    }
-  });
-});
-
-</script>
-</body>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax JS</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<style>
-body {
-    margin: 0;
-    padding: 0;
-}
-
 section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: #333;
-    color: white;
+  height: 100svh;
 }
 
-/* Container wajib menggunakan overflow hidden */
-.parallax-container {
-    position: relative;
-    overflow: hidden; /* Menyembunyikan gambar yang keluar batas */
-    background-color: #000;
+.sec0 {
+  background: rgb(39, 204, 255);
 }
 
-/* Bagian gambar */
-.parallax-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120%; /* Lebih tinggi dari container agar tidak kosong saat digerakkan */
-    z-index: 1;
-    will-change: transform; /* Optimasi performa browser */
+.sec1 {
+  background: rgb(18, 131, 229);
+  display: grid;
+  place-items: center;
+  position: relative;
 }
 
-.parallax-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.sec2 {
+  background: rgb(20, 88, 189);
 }
 
-.overlay-text {
-    position: relative;
-    z-index: 2; /* Agar teks berada di atas gambar */
+.sec3 {
+  background: rgb(14, 26, 158);
 }
+
+.sec4 {
+  background: rgb(79, 16, 168);
+}
+
+div {
+  font-size: 100px;
+  background: violet;
+  padding: 40px;
+  position: sticky;
+}
+
 </style>
 <body>
-
-    <section class="normal">
-        <h1>Konten Pertama</h1>
-    </section>
-
-    <!-- Container untuk efek paralaks -->
-    <section class="parallax-container">
-        <!-- Gambar dengan atribut data-speed untuk mengatur kecepatan -->
-        <div class="parallax-img" data-speed="0.5">
-            <img src="https://source.unsplash.com/random/1920x1080/?mountains" alt="Background">
-        </div>
-        <div class="overlay-text">
-            <h2>Efek Paralaks JS</h2>
-        </div>
-    </section>
-
-    <section class="normal">
-        <h1>Konten Bawah</h1>
-    </section>
-
-    <script>
-      const parallaxImages = document.querySelectorAll('.parallax-img');
-
-window.addEventListener('scroll', () => {
-    // Dapatkan posisi scroll saat ini
-    const scrollY = window.scrollY;
-
-    // Loop melalui setiap elemen paralaks
-    parallaxImages.forEach(img => {
-        // Dapatkan kecepatan dari attribute data-speed
-        // Jika tidak ada, default 0.5
-        const speed = img.getAttribute('data-speed') || 0.5;
-
-        // Hitung offset
-        // Kita perlu menghitung posisi elemen relatif terhadap viewport
-        const container = img.parentElement;
-        const containerTop = container.offsetTop;
-        const containerHeight = container.offsetHeight;
-
-        // Cek apakah elemen sedang terlihat di layar
-        if (scrollY + window.innerHeight > containerTop && scrollY < containerTop + containerHeight) {
-            // Rumus: (Posisi Scroll Global - Posisi Atas Container) * Kecepatan
-            const yPos = (scrollY - containerTop) * speed;
-            
-            // Gunakan translate3d untuk akselerasi hardware (lebih halus)
-            img.style.transform = `translate3d(0, ${yPos}px, 0)`;
-        }
-    });
-});
-    </script>
+  <section class="sec0"></section>
+  <section class="sec1">
+    <div>Hello</div>
+  </section>
+  <section class="sec2"></section>
+  <section class="sec3"></section>
+  <section class="sec4"></section>
 </body>
 </html>

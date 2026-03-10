@@ -160,68 +160,54 @@
     scale: 1.02;
 }
 
+.grup-bisnis .judul-section-grup-bisnis > * {
+    position: relative;
+    z-index: 1;
+}
+
 .grup-bisnis .isi-grup-bisnis {
     box-shadow: var(--box-shadow);
     border-radius: var(--big-border-radius) !important;
 }
 
 .grup-bisnis .judul-section-grup-bisnis {
+    position: relative;
+    overflow: hidden;
     height: 500px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 59.18%, #FFF 93.64%), url(../assets/image/contoh-img.jpg) lightgray 50% / cover no-repeat;
-    border-radius: var(--big-border-radius) !important;
-    transition: filter 0.3s ease-in-out;
+    border-radius: var(--big-border-radius) var(--big-border-radius) 0 0 !important;
+    --bg-image: url('../assets/image/contoh-img.jpg');
 }
 
-.grup-bisnis .judul-section-grup-bisnis.blur-effect {
-    filter: blur(15px);
-    opacity: 0.8; 
+.grup-bisnis .judul-section-grup-bisnis::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: 
+        linear-gradient(180deg, rgba(255,255,255,0) 59.18%, #FFF 93.64%),
+        var(--bg-image) center / cover no-repeat;
+
+    transition: filter 1000ms ease, transform 300ms ease;
+    z-index: 0;
+}
+
+.grup-bisnis .judul-section-grup-bisnis.fade-out::after {
+    filter: blur(10px);
+    transform: scale(1.05);
+}
+
+#sub-bisnis-title,
+#sub-bisnis-desc{
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .grup-bisnis .penjelasan-grup-bisnis {
-    border-radius: var(--big-border-radius) !important
+    border-radius: 0 0 var(--big-border-radius) var(--big-border-radius) !important
 }
 
 .grup-bisnis .penjelasan-grup-bisnis .row {
     padding: 16px;
-}
-
-/* ============================== PORTFOLIO ============================== */
-.portfolio .isi-portfolio .col-12 {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.portfolio .isi-portfolio .portfolio-card {
-    flex: 1 0 200px;
-    background: var(--primary-50);
-    height: 400px;
-    border-radius: var(--default-border-radius);
-    background: url(../assets/image/sida-tower.png);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    transition: var(--default-duration);
-}
-
-.portfolio .isi-portfolio .portfolio-card:hover {
-    transform: scale(1.02);
-}
-
-.portfolio .isi-portfolio .portfolio-card:hover  .portfolio-card-desc {
-    bottom: 0;
-    left: 0;
-}
-
-.portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    bottom: -84px;
-    background: radial-gradient(109.54% 73.32% at 7.26% 84.9%, #000 0%, rgba(0, 0, 0, 0.00) 100%);
-    color: var(--white);
-    transition: var(--default-duration);
 }
 
 /* ============================== FAQ ============================== */
@@ -248,11 +234,6 @@
     body {
         font-size: 70%;
     }
-
-    /* ============================== PORTFOLIO ============================== */
-    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
-        bottom: -50px;
-    }
 }
 
 @media screen and (max-width: 991.5px) {
@@ -270,16 +251,6 @@
     .faq .cta-faq {
         display: none;
     }
-
-    /* ============================== PORTFOLIO ============================== */
-    .portfolio .isi-portfolio .portfolio-card {
-        height: 300px;
-        flex: 1 0 200px
-    }
-    
-    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
-        bottom: -65px;
-    }
 }
 
 @media screen and (max-width: 706px) {
@@ -289,46 +260,6 @@
     .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
         bottom: -80px;
     }  
-}
-
-@media screen and (max-width: 692px) {
-    /* ============================== PORTFOLIO ============================== */
-    /* .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
-        bottom: -86px;
-    }
-    
-    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
-        bottom: -86px;
-    } */
-}
-
-@media screen and (max-width: 655.5px) {
-    /* ============================== PORTFOLIO ============================== */
-    /* .portfolio .isi-portfolio .portfolio-card:last-child {
-        height: 200px;
-    }
-        
-    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
-        bottom: -50px;
-    }
-    
-    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
-        bottom: -50px;
-        width: 50%;
-    } */
-}
-
-@media screen and (max-width: 611px) {
-    /* ============================== PORTFOLIO ============================== */
-    /* .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
-        bottom: -66px;
-    } */
-}
-
-@media screen and (max-width: 594px) {
-    .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
-        bottom: -70px;
-    }
 }
 
 @media screen and (max-width: 575.5px) {
@@ -396,20 +327,6 @@
     }
 }
 
-@media screen and (max-width: 463.5px) {
-    /* ============================== PORTFOLIO ============================== */
-    /* .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
-        bottom: -80px;
-    } */
-}
-
-@media screen and (max-width: 447.5px) {
-    /* ============================== PORTFOLIO ============================== */
-    /* .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc {
-        bottom: -80px;
-    } */
-}
-
 @media screen and (max-width: 440px) {
     /* ============================== GRUP BISNIS ============================== */
     .grup-bisnis .heading-2 {
@@ -417,32 +334,7 @@
     }
 }
 
-@media screen and (max-width: 439.5px) {
-    /* ============================== PORTFOLIO ============================== */
-    /* .portfolio .isi-portfolio .portfolio-card {
-        height: 200px;
-    }
 
-    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc, .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc  {
-        bottom: -70px;
-        width: 65%;
-    } */
-}
-
-@media screen and (max-width: 378px) {
-    /* ============================== GRUP BISNIS ============================== */
-    .grup-bisnis .heading-2 {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 360px) {
-
-    /* .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc, .portfolio .isi-portfolio .portfolio-card:last-child .portfolio-card-desc  {
-        bottom: -50px;
-        width: 100%;
-    } */
-}
 @media screen and (max-width: 331px) {
     /* ============================== GRUP BISNIS ============================== */
     .grup-bisnis .heading-2 {
