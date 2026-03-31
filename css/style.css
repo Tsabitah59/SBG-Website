@@ -1,6 +1,7 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text-color);
+    scroll-behavior: smooth;
 }
 
 header, .section-height{
