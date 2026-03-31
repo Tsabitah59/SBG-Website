@@ -110,6 +110,9 @@ nav .offcanvas .offcanvas-title img {
 
 /* ============================== BUTTON ============================== */
 .button-primary-medium {
+    display: inline-flex;
+    border: none;
+    outline: none;
     text-decoration: none;
     padding: 10px 24px;
     background: var(--primary-700);

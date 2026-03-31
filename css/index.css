@@ -121,6 +121,7 @@
 }
 
 /* ============================== GRUP BISNIS ============================== */
+/* Switch Button */
 .grup-bisnis .switch-button-grup-bisnis {
     overflow-x: auto;
     overflow-y: hidden;
@@ -160,6 +161,7 @@
     scale: 1.02;
 }
 
+/* Isi Section */
 .grup-bisnis .judul-section-grup-bisnis > * {
     position: relative;
     z-index: 1;
@@ -210,17 +212,25 @@
     padding: 16px;
 }
 
-/* ============================== FAQ ============================== */
-.faq .accordian-button {
-    color: var(--text-color);
-    padding: 0 !important;
+/* ============================== FEATURED PRODUCT ======================================================================================================================== */
+.featured-product {
+  padding-block: 100px;
 }
 
+.features li {
+  margin-bottom: 10px;
+}
 
-.faq .cta-faq .isi-cta-faq {
+.mockup {
+  width: 100%;
+}
+
+/* ============================== CONTACT ======================================================================================================================== */
+.contact .cta-contact .isi-cta-contact {
     background: var(--primary-50);
     padding: 16px;
     border-radius: var(--default-border-radius);
+    height: 320px;
 }
 
 /* ============================== RESPONSIVE ======================================================================================================================== */
@@ -247,9 +257,15 @@
     .about .about-bg-img {
         display: none;
     }
-    
-    .faq .cta-faq {
-        display: none;
+}
+
+@media screen and (max-width: 767.5px) {
+    .mockup {
+        width: 80%;
+        margin: auto;
+    }
+    .contact .cta-contact .isi-cta-contact {
+        height: 100%;
     }
 }
 

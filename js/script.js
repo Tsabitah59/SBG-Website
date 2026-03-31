@@ -2,9 +2,7 @@
 const navbar = document.getElementsByTagName('nav')[0];
 const logo = document.getElementById('logo-sida');
 const backdrop = document.querySelector('.navbar-backdrop');
-
-let header = document.getElementById("header");
-let titleText = document.getElementById("title-text");
+const footer = document.get;
 
 window.addEventListener('scroll', () => {
     const scrolled = window.scrollY > 1;
@@ -15,13 +13,6 @@ window.addEventListener('scroll', () => {
     backdrop.classList.toggle('active', scrolled);
     
     logo.src = scrolled ? 'assets/logo/logo-color.svg' : 'assets/logo/logo-white.svg';
-    
-// ============================== HERO ==============================
-//     var value = window.scrollY;
-
-//     console.log(value + 1);
-    
-//     titleText.style.scale = (value + 1) * 0.5 
 });
 
 
@@ -124,7 +115,7 @@ function renderSubBusiness(index) {
         
     focusBusiness.forEach((focusBisnisData, index) => {
         const listForGrupBisnisData = document.createElement('li');
-        listForGrupBisnisData.className = 'd-flex gap-2 align-items-center mb-3';
+        listForGrupBisnisData.className = 'd-flex gap-3 align-items-center mb-3';
         
         const tagFokusBisnisGrupBisnis = document.createElement('span');
         tagFokusBisnisGrupBisnis.className = 'primary-tag';
@@ -134,7 +125,7 @@ function renderSubBusiness(index) {
         wrapperListPenjelasannya.className = 'list-penjelasan-fokus-bisnis-grup-bisnis';
         
         const dataPenjelasanKeunggulanGrupBisnisJudul = document.createElement('h6');
-        dataPenjelasanKeunggulanGrupBisnisJudul.className = 'heading-6 mb-0';
+        dataPenjelasanKeunggulanGrupBisnisJudul.className = 'body-p mb-0';
         dataPenjelasanKeunggulanGrupBisnisJudul.textContent = focusBisnisData;
         
         wrapperListPenjelasannya.appendChild(dataPenjelasanKeunggulanGrupBisnisJudul);
@@ -169,14 +160,14 @@ function renderSubBusiness(index) {
     setTimeout(() => {
         keyAdvantages.forEach((item, index) => {
             const listForGrupBisnisData = document.createElement('li');
-            listForGrupBisnisData.className = 'd-flex gap-2 align-items-center mb-3';
+            listForGrupBisnisData.className = 'd-flex gap-3 align-items-center mb-3';
                 
             const tagKeunggulanGrupBisnis = document.createElement('span');
             tagKeunggulanGrupBisnis.className = 'primary-tag';
             tagKeunggulanGrupBisnis.textContent = index + 1; 
                 
             const dataPenjelasanKeunggulanGrupBisnis = document.createElement('h6');
-            dataPenjelasanKeunggulanGrupBisnis.className = 'heading-6 mb-0';
+            dataPenjelasanKeunggulanGrupBisnis.className = 'body-p mb-0';
             dataPenjelasanKeunggulanGrupBisnis.textContent = item;
                 
             listForGrupBisnisData.appendChild(tagKeunggulanGrupBisnis);
