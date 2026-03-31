@@ -131,8 +131,3 @@ h2 span, h3 span, h4 span {
 .text-color-secondary {
     color: var(--text-secondary);
 }
-
-.form-control {
-    outline: none !important;
-    border-radius: var(--small-border-radius) !important;
-}

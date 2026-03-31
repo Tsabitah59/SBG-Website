@@ -56,23 +56,23 @@
 }
 
 /* ============================== PORTFOLIO ============================== */
-.portfolio .blurry-circle {
+.featured-product .blurry-circle {
     right: -250px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.portfolio .dots-bg-thin {
+.featured-product .dots-bg-thin {
     left: -30px;
 }
 
 /* ============================== FAQ ============================== */
-.faq .dots-bg-thin{
+.contact .dots-bg-thin{
     bottom: -80px;
     right: -30px;
 }
 
-.faq .blurry-circle {
+.contact .blurry-circle {
     left: -250px;
     top: 50%;
     transform: translateY(-50%);

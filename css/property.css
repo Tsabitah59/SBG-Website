@@ -108,6 +108,17 @@ nav .offcanvas .offcanvas-title img {
     color: var(--white);
 }
 
+/* ============================== TEXT INPUT ============================== */
+.form-control:focus {
+  border-color: var(--primary-700);
+  box-shadow: 0 0 0 3px var(--primary-100);
+}
+
+.form-control {
+    outline: none !important;
+    border-radius: var(--small-border-radius) !important;
+}
+
 /* ============================== BUTTON ============================== */
 .button-primary-medium {
     display: inline-flex;

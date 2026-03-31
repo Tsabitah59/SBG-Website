@@ -124,7 +124,7 @@ function renderSubBusiness(index) {
         const wrapperListPenjelasannya = document.createElement('div');
         wrapperListPenjelasannya.className = 'list-penjelasan-fokus-bisnis-grup-bisnis';
         
-        const dataPenjelasanKeunggulanGrupBisnisJudul = document.createElement('h6');
+        const dataPenjelasanKeunggulanGrupBisnisJudul = document.createElement('p');
         dataPenjelasanKeunggulanGrupBisnisJudul.className = 'body-p mb-0';
         dataPenjelasanKeunggulanGrupBisnisJudul.textContent = focusBisnisData;
         
@@ -166,7 +166,7 @@ function renderSubBusiness(index) {
             tagKeunggulanGrupBisnis.className = 'primary-tag';
             tagKeunggulanGrupBisnis.textContent = index + 1; 
                 
-            const dataPenjelasanKeunggulanGrupBisnis = document.createElement('h6');
+            const dataPenjelasanKeunggulanGrupBisnis = document.createElement('p');
             dataPenjelasanKeunggulanGrupBisnis.className = 'body-p mb-0';
             dataPenjelasanKeunggulanGrupBisnis.textContent = item;
                 
@@ -191,54 +191,29 @@ function updateActiveButton(activeIndex) {
 }
 
 window.onload = loadData;
+
 // ============================== KEUNGGULAN ==============================
-let children = [];
+const section = document.querySelector('.keunggulan');
+const container = document.querySelector('.cards-container');
 
-function removeParent() {
-    const parent = document.getElementById('keunggulan-card-group-to-hide');
-    const container = document.getElementById('keunggulan-wrapper');
+window.addEventListener('scroll', () => {
+  const sectionTop = section.offsetTop;
+  const scrollY = window.scrollY;
+  
+  const sectionHeight = section.offsetHeight;
+  const windowHeight = window.innerHeight;
 
-    if (parent && container) {
-        while (parent.firstChild) {
-            children.push(parent.firstChild);
-            container.insertBefore(parent.firstChild, parent);
-        }
-        
-        parent.remove();
-    }
-}
+  const scrollProgress = (scrollY - sectionTop) / (sectionHeight - windowHeight);
 
-function addParent() {
-    const container = document.getElementById('keunggulan-wrapper');
-    
-    if (container && children.length > 0) {
-        const parent = document.createElement('div');
-        parent.id = 'keunggulan-card-group-to-hide';
-        parent.className = 'keunggulan-card-group overflow-auto'
-        
-        container.appendChild(parent);
-        
-        children.forEach(child => {
-            parent.appendChild(child);
-        });
-        
-        children = [];
-    }
-}
+  const maxTranslate = container.scrollWidth - window.innerWidth;
 
-function checkScreenSize() {
-    const parentExists = document.getElementById('keunggulan-card-group-to-hide');
-    
-    if (window.innerWidth > 575) {
-        if (parentExists) {
-            removeParent();
-        }
-    } else {
-        if (!parentExists) {
-            addParent();
-        }
-    }
-}
+  console.log(container.scrollWidth);
+  
+  
+  if (scrollProgress >= 0 && scrollProgress <= 1) {
+    container.style.transform = `translateX(-${scrollProgress * (maxTranslate + 100)}px)`;
+  }
+});
 
 // Panggil fungsi saat halaman dimuat dan saat window di-resize
 window.addEventListener('load', checkScreenSize);

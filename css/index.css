@@ -84,12 +84,50 @@
 }
 
 /* ============================== KEUNGGULAN ============================== */
+/* SECTION TINGGI BUAT SCROLL */
 .keunggulan {
-    padding-block: 60px;
+  height: 300vh;
+  position: relative;
 }
 
-.keunggulan .card-layout {
-    align-items: start;
+.keunggulan .keunggulan-judul {
+    padding-top: 200px;
+    padding-bottom: 80px;
+}
+
+.keunggulan .sticky-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* HEADER */
+.keunggulan .section-header {
+  text-align: center;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+
+/* CARD CONTAINER */
+.keunggulan .cards-container {
+  display: flex;
+  gap: 20px;
+  padding: 0 10vw;
+  transition: transform 0.1s ease-out;
+}
+
+.keunggulan .card-layout{
+    width: 300px;
+    height: 170px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-size: 20px;
+    flex-shrink: 0;
 }
 
 /* ============================== RUNNING TEXT ============================== */
@@ -226,6 +264,10 @@
 }
 
 /* ============================== CONTACT ======================================================================================================================== */
+.contact {
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
 .contact .cta-contact .isi-cta-contact {
     background: var(--primary-50);
     padding: 16px;
@@ -270,65 +312,17 @@
 }
 
 @media screen and (max-width: 706px) {
-    .portfolio .isi-portfolio .portfolio-card {
-        
+    /* ============================== KEUNGGULAN ============================== */
+    .keunggulan .heading-2 {
+        width: 300px;
+        margin: auto;
     }
-    .portfolio .isi-portfolio .portfolio-card .portfolio-card-desc {
-        bottom: -80px;
-    }  
 }
 
 @media screen and (max-width: 575.5px) {
     /* ============================== ABOUT ============================== */
     .about span.text-color-secondary  {
         display: block;
-    }
-
-
-    
-    /* ============================== KEUNGGULAN ============================== */
-    .keunggulan .keunggulan-card-group {
-        padding-bottom: 80px;
-    }
-
-    .keunggulan .judul-keunggulan {
-        position: sticky;
-        top: 80px;
-    }
-
-    .keunggulan .keunggulan-card-group .col {
-        position: sticky;
-        top: 220px;
-    }
-
-    .keunggulan .keunggulan-card-group .col .card-layout {
-        background: var(--white);
-    }
-
-    /* efek numpuk */
-    .keunggulan .keunggulan-card-group .col:nth-child(1) {
-        transform: translateY(0px);
-        z-index: 1;
-    }
-
-    .keunggulan .keunggulan-card-group .col:nth-child(2) {
-        transform: translateY(20px);
-        z-index: 2;
-    }
-
-    .keunggulan .keunggulan-card-group .col:nth-child(3) {
-        transform: translateY(40px);
-        z-index: 3;
-    }
-
-    .keunggulan .keunggulan-card-group .col:nth-child(4) {
-        transform: translateY(60px);
-        z-index: 4;
-    }
-
-    .keunggulan .keunggulan-card-group .col:nth-child(5) {
-        transform: translateY(80px);
-        z-index: 5;
     }
 
     /* ============================== GRUP BISNIS ============================== */
@@ -347,6 +341,12 @@
     /* ============================== GRUP BISNIS ============================== */
     .grup-bisnis .heading-2 {
         width: 70%;
+    }
+    
+    /* ============================== KEUNGGULAN ============================== */
+    .keunggulan .card-layout{
+        width: 200px;
+        height: 250px;
     }
 }
 
